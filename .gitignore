@@ -1,0 +1,61 @@
+# Ignore dataset files
+*.csv
+*.tsv
+*.json
+*.xml
+*.xlsx
+*.xls
+*.parquet
+*.hdf5
+*.h5
+*.pickle
+*.pkl
+*.zip
+*.gz
+*.tar
+*.rar
+
+# Ignore raw data and outputs directories
+data/
+datasets/
+outputs/
+logs/
+results/
+
+# Ignore temporary or system-specific files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Ignore Python-related files
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints
+
+# Ignore virtual environments
+venv/
+.env/
+*.env
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore compiled code or binaries
+*.o
+*.so
+*.dll
+*.exe
+
+# Ignore large binary files
+*.model
+*.ckpt
+*.weights
+
+# Ignore specific tools and IDEs
+.vscode/
+.idea/
+*.iml
