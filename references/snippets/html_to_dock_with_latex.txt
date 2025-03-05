@@ -1,0 +1,2 @@
+pandoc -s input.html -t markdown -o temp.md --no-wrap
+pandoc -s temp.md -o output.docx --from=markdown-raw_tex
