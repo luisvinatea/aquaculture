@@ -1,107 +1,94 @@
 import numpy as np
 from scipy.optimize import differential_evolution
 import numpy_financial as npf
-from simulator import setup_simulator  # Import the simulator setup function
 
-# Constants
-TASA_LIBRE_DE_RIESGO = 0.015  # Risk-free rate
-RETORNO_MERCADO = 0.08  # Market return
-BETA_APALANCADO = 1.2  # Leveraged beta
-TASA_CRECIMIENTO_PERPETUIDAD = 0.02  # Perpetual growth rate
-HORIZON = 6  # Fixed time horizon in years
-
-def calcular_metricas(variables, country_data):
+def calcular_metricas_parametros_fijos(variables):
     """
-    Calculate financial metrics for the project with dynamic funding rate, hedging cost, corporate tax, and risk-adjusted profit.
+    Calcula las métricas financieras del proyecto con parámetros de descuento de factoring
+    y porcentaje principal del camaronero fijos.
 
     Args:
-        variables (tuple): Tuple containing:
-                           - variables[0]: Factoring discount (%).
-                           - variables[1]: Principal percentage (%).
-                           - variables[2]: Markup for funding rate (%).
-                           - variables[3]: Interest rate charged to shrimp farmers (%).
-        country_data (dict): Dictionary containing country-specific data:
-                            - 'annual_hedging_cost': Hedging cost for the country.
-                            - 'corporate_tax': Corporate tax rate for the country.
-                            - 'risk_adjusted_profit': Risk-adjusted profit for the country.
-                            - 'base_interest_rate': Base interest rate for the country (%).
+        variables (tuple): Tupla que contiene el markup (en porcentaje) y la tasa de interés al camaronero (en porcentaje).
+                           - variables[0]: Markup para la tasa de financiamiento suiza (%).
+                           - variables[1]: Tasa de interés anual cobrada a los camaroneros (%).
 
     Returns:
-        dict: A dictionary containing the calculated financial metrics.
+        dict: Un diccionario que contiene las métricas financieras calculadas:
+              - 'roi': Retorno sobre la Inversión (ROI).
+              - 'roe': Retorno sobre el Capital Propio (ROE).
+              - 'payback': Tiempo de recuperacion de la inversion (en años).
+              - 'irr': Tasa Interna de Retorno (TIR).
+              - 'npv': Valor Presente Neto (VPN).
+              - 'pi': Índice de Rentabilidad (IR).
+              - 'rate_difference': Diferencia absoluta entre la tasa de interés al camaronero y la tasa suiza.
+              - 'valid': Booleano que indica si el conjunto de parámetros es válido (True) o no (False).
+              - 'utilidad_despues_de_impuestos': Utilidad después de impuestos calculada.
+              - 'capital_propio': Capital propio invertido.
+              - 'monto_financiado': Monto total financiado.
+              - 'tasa_suiza_anual': Tasa de interés suiza anual utilizada en el cálculo.
+              - 'costo_inicial': Costo inicial de la inversión.
     """
+    markup, tasa_camaronero = variables
+    descuento_factoring = 0.10  # Fijo en 10%
+    porcentaje_principal = 0.25   # Fijo en 25%
+    periodo_pago_camaronero_meses = 72 # Periodo de pago del camaronero en meses
+    TASA_BASE_SUIZA_ANUAL = 0.005 # Tasa base anual en Suiza
+    COSTO_HEDGING_ANUAL = -0.00036 # Costo anual de cobertura (hedging)
+    TASA_IMPUESTOS = 0.146 # Tasa de impuestos
+    RECEBIBLES_INICIALES = 120_000 # Monto inicial de cuentas por cobrar
 
-def calcular_metricas(variables, country_data):
-    descuento_factoring, porcentaje_principal, markup, tasa_camaronero = variables
-    hedging_cost = country_data.get('Annualized Coverage Cost (%)', 0) / 100
-    corporate_tax = country_data.get('Corporate Tax (%)', 0) / 100  # Already in %, convert to decimal
-    risk_adjusted_profit = country_data.get('Adjusted Profitability (%)', 0) / 100
-    base_interest_rate = country_data.get('Base Loan Rate (%)', 0.5) / 100
+    markup /= 100 # Convertir markup de porcentaje a decimal
+    tasa_camaronero_anual = tasa_camaronero / 100 # Convertir tasa camaronero de porcentaje a decimal
 
-    # Validate input ranges
-    if not (10 <= descuento_factoring <= 20 and 15 <= porcentaje_principal <= 30 and
-            4 <= markup <= 6 and 12 <= tasa_camaronero <= 14):
-        print(f"Invalid params: {variables}")
+    # Validar rangos de parámetros de entrada
+    if not (0.04 <= markup <= 0.06 and 0.12 <= tasa_camaronero_anual <= 0.14):
         return {
             'roi': -np.inf, 'roe': -np.inf, 'payback': np.inf, 'irr': -np.inf, 'npv': -np.inf, 'pi': -np.inf,
-            'rate_difference': np.inf, 'valid': False, 'utilidad_despues_de_impuestos': 0, 'capital_propio': 0,
-            'monto_financiado': 0, 'tasa_financiamiento_anual': 0, 'costo_inicial': 0, 'corporate_tax': corporate_tax
+            'rate_difference': np.inf, 'valid': False, 'utilidad_despues_de_impuestos': 0, 'capital_propio': 0, 'monto_financiado': 0, 'tasa_suiza_anual': 0, 'costo_inicial': 0
         }
 
-    # Convert percentages to decimals
-    descuento_factoring /= 100
-    porcentaje_principal /= 100
-    markup /= 100
-    tasa_camaronero_anual = tasa_camaronero / 100
-
-    # Calculate initial investment and financing
-    RECEBIBLES_INICIALES = 120_000
-    costo_inicial = RECEBIBLES_INICIALES * (1 - descuento_factoring)
-    principal = costo_inicial * porcentaje_principal
-    capital_propio = costo_inicial - principal
-    monto_financiado = costo_inicial - principal
-
+    periodo_años = periodo_pago_camaronero_meses / 12 # Periodo de pago en años
+    costo_inicial = RECEBIBLES_INICIALES * (1 - descuento_factoring) # Costo inicial de la inversión
+    principal = costo_inicial * porcentaje_principal # Monto del principal
+    capital_propio = costo_inicial - principal # Capital propio invertido
     if capital_propio <= 0:
         return {
             'roi': -np.inf, 'roe': -np.inf, 'payback': np.inf, 'irr': -np.inf, 'npv': -np.inf, 'pi': -np.inf,
-            'rate_difference': np.inf, 'valid': False, 'utilidad_despues_de_impuestos': 0, 'capital_propio': 0,
-            'monto_financiado': 0, 'tasa_financiamiento_anual': 0, 'costo_inicial': 0, 'corporate_tax': corporate_tax
+            'rate_difference': np.inf, 'valid': False, 'utilidad_despues_de_impuestos': 0, 'capital_propio': 0, 'monto_financiado': 0, 'tasa_suiza_anual': 0, 'costo_inicial': 0
         }
 
-    # Calculate funding rate
-    tasa_financiamiento_anual = base_interest_rate + markup + hedging_cost
-
-    # Calculate total financing cost and income
-    costo_financiamiento_total = monto_financiado * tasa_financiamiento_anual * HORIZON
-    ingreso_intereses_totales = monto_financiado * tasa_camaronero_anual * HORIZON
-    utilidad_antes_de_impuestos = ingreso_intereses_totales - costo_financiamiento_total
+    monto_financiado = costo_inicial - principal # Monto financiado externamente
+    tasa_suiza_anual = TASA_BASE_SUIZA_ANUAL + markup + COSTO_HEDGING_ANUAL # Tasa de financiamiento suiza anual
+    costo_financiamiento_total = monto_financiado * tasa_suiza_anual * periodo_años # Costo total de financiamiento
+    ingreso_intereses_totales = monto_financiado * tasa_camaronero_anual * periodo_años # Ingreso total por intereses cobrados
+    utilidad_antes_de_impuestos = ingreso_intereses_totales - costo_financiamiento_total # Utilidad antes de impuestos
 
     if utilidad_antes_de_impuestos <= 0:
         return {
             'roi': -np.inf, 'roe': -np.inf, 'payback': np.inf, 'irr': -np.inf, 'npv': -np.inf, 'pi': -np.inf,
-            'rate_difference': np.inf, 'valid': False, 'utilidad_despues_de_impuestos': 0, 'capital_propio': 0,
-            'monto_financiado': 0, 'tasa_financiamiento_anual': 0, 'costo_inicial': 0, 'corporate_tax': corporate_tax
+            'rate_difference': np.inf, 'valid': False, 'utilidad_despues_de_impuestos': 0, 'capital_propio': 0, 'monto_financiado': 0, 'tasa_suiza_anual': 0, 'costo_inicial': 0
         }
 
-    # Calculate taxes and after-tax profit
-    impuestos = utilidad_antes_de_impuestos * corporate_tax
-    utilidad_despues_de_impuestos = utilidad_antes_de_impuestos - impuestos
+    impuestos = utilidad_antes_de_impuestos * TASA_IMPUESTOS # Calculo de impuestos
+    utilidad_despues_de_impuestos = utilidad_antes_de_impuestos - impuestos # Utilidad despues de impuestos
 
-    # Calculate financial metrics
-    roi = utilidad_despues_de_impuestos / costo_inicial if costo_inicial != 0 else 0
-    roe = utilidad_despues_de_impuestos / capital_propio if capital_propio != 0 else np.inf
-    payback = costo_inicial / utilidad_despues_de_impuestos if utilidad_despues_de_impuestos != 0 else np.inf
+    # Cálculo de métricas financieras
+    roi = utilidad_despues_de_impuestos / costo_inicial if costo_inicial != 0 else 0 # ROI
+    roe = utilidad_despues_de_impuestos / capital_propio if capital_propio != 0 else np.inf # ROE
+    payback = costo_inicial / utilidad_despues_de_impuestos if utilidad_despues_de_impuestos != 0 else np.inf # Payback
 
-    flujos_caja = [utilidad_despues_de_impuestos] * HORIZON
-    flujo_caja_array = np.insert(flujos_caja, 0, -costo_inicial)
-    irr_value = npf.irr(flujo_caja_array)
-    npv_value = npf.npv(tasa_financiamiento_anual, flujo_caja_array)
+    inversion_inicial = costo_inicial # Inversión inicial
+    flujos_caja = [utilidad_despues_de_impuestos] * 6 # Flujos de caja
+    flujo_caja_array = np.insert(flujos_caja, 0, -inversion_inicial) # Array de flujos de caja incluyendo la inversión inicial
+    irr_value = npf.irr(flujo_caja_array) # TIR
+    npv_value = npf.npv(tasa_suiza_anual, flujo_caja_array) # VPN
 
-    pv_flujos_caja_entrantes = np.sum([flujos_caja[t] / (1 + tasa_financiamiento_anual) ** (t + 1) for t in range(HORIZON)])
-    pi_value = (pv_flujos_caja_entrantes + costo_inicial) / costo_inicial if costo_inicial != 0 else np.inf
+    pv_flujos_caja_entrantes = np.sum([flujos_caja[t] / (1 + tasa_suiza_anual)**(t+1) for t in range(len(flujos_caja))]) # Valor presente de flujos de caja entrantes
+    pi_value = (pv_flujos_caja_entrantes + inversion_inicial) / inversion_inicial if inversion_inicial != 0 else np.inf # IR
 
-    rate_difference = abs(tasa_camaronero_anual - tasa_financiamiento_anual)  # Already decimal in calcular_metricas
+    rate_difference = abs(tasa_camaronero_anual - tasa_suiza_anual) # Diferencia de tasas
 
-    return {
+    metricas = {
         'roi': roi,
         'roe': roe,
         'payback': payback,
@@ -113,182 +100,159 @@ def calcular_metricas(variables, country_data):
         'utilidad_despues_de_impuestos': utilidad_despues_de_impuestos,
         'capital_propio': capital_propio,
         'monto_financiado': monto_financiado,
-        'tasa_financiamiento_anual': tasa_financiamiento_anual,
-        'costo_inicial': costo_inicial,
-        'corporate_tax': corporate_tax  # Include for DCF
+        'tasa_suiza_anual': tasa_suiza_anual,
+        'costo_inicial': costo_inicial
     }
+    return metricas
 
-def objetivo_combinado(variables, country_data):
+def objetivo_combinado_parametros_fijos(variables):
     """
-    Combined objective function for optimization. Penalizes invalid solutions and those that do not meet
-    the target ranges for financial metrics. Minimizes the difference between the shrimp farmer's interest rate
-    and the funding rate.
+    Función objetivo combinada para la optimización, penaliza soluciones inválidas
+    y aquellas que no cumplen con los rangos objetivo de las métricas financieras.
+    Minimiza la diferencia entre la tasa de interés al camaronero y la tasa suiza.
 
     Args:
-        variables (tuple): Tuple containing the factoring discount, principal percentage, markup, and shrimp farmer rate.
-        country_data (dict): Dictionary containing country-specific data.
+        variables (tuple): Tupla que contiene el markup y la tasa de interés al camaronero.
 
     Returns:
-        float: Value of the objective function. Returns np.inf if the solution is invalid or does not meet constraints.
-               Returns the rate difference if the solution is valid and meets constraints.
+        float: Valor de la función objetivo. Retorna np.inf si la solución no es válida o no cumple las restricciones.
+               Retorna la diferencia de tasas si la solución es válida y cumple las restricciones.
     """
-def objetivo_combinado(variables, country_data):
-    metricas = calcular_metricas(variables, country_data)
+    markup, tasa_camaronero = variables
+    metricas_objetivo = calcular_metricas_parametros_fijos(variables)
 
-    if not metricas['valid']:
-        return np.inf  # Invalid parameters
+    if not metricas_objetivo['valid']:
+        return np.inf  # Penalización alta para conjuntos de parámetros inválidos
 
-    penalizacion = 0
-    # Enforce target ranges
-    if not 0.20 <= metricas['irr'] <= 0.30:
-        print(f"IRR {metricas['irr']:.2%} outside 20-30% for {variables}")
-        penalizacion += 1000  # Increase penalty to force compliance
-    if metricas['pi'] <= 1:
-        penalizacion += 1000
-    if metricas['npv'] <= 0:
-        penalizacion += 1000
-    if not 0.10 <= metricas['roe'] <= 0.15:
-        penalizacion += 1000
-    if not 0.20 <= metricas['roi'] <= 0.30:
-        penalizacion += 1000
-    if metricas['payback'] > HORIZON:
-        penalizacion += 1000
+    penalizacion = 0 # Inicializar penalización
+
+    # Penalizar soluciones que no cumplen con los rangos objetivo
+    if not 0.20 <= metricas_objetivo['irr'] <= 0.30:
+        penalizacion += 100  # Penalización sustancial por TIR fuera de rango
+    if metricas_objetivo['pi'] <= 1:
+        penalizacion += 100  # Penalización sustancial por IR menor o igual a 1
+    if metricas_objetivo['npv'] <= 0:
+        penalizacion += 100  # Penalización sustancial por VPN menor o igual a 0
+    if not 0.10 <= metricas_objetivo['roe'] <= 0.15:
+        penalizacion += 100  # Penalización sustancial por ROE fuera de rango
+    if not 0.20 <= metricas_objetivo['roi'] <= 0.30:
+        penalizacion += 100  # Penalización sustancial por ROI fuera de rango
+    if metricas_objetivo['payback'] > 6:
+        penalizacion += 100 # Penalización sustancial por Payback mayor a 6 años
 
     if penalizacion > 0:
-        return penalizacion + metricas['rate_difference']  # Combine penalty with rate diff
+        return penalizacion # Retornar la penalización combinada si alguna restricción no se cumple
 
-    return metricas['rate_difference']  # Minimize this only if no penalties
+    return metricas_objetivo['rate_difference'] # Minimizar la diferencia de tasas si se cumplen todos los objetivos
 
-def optimize_for_country(country_data):
-    mapped_data = {
-        'annual_hedging_cost': country_data.get('Annualized Coverage Cost (%)', 0),
-        'corporate_tax': country_data.get('Corporate Tax (%)', 0),
-        'risk_adjusted_profit': country_data.get('Adjusted Profitability (%)', 0),
-        'base_interest_rate': country_data.get('Base Loan Rate (%)', 0.5)
-    }
-    print(f"Optimizing for {country_data['Country']}: {mapped_data}")  # Debug
 
-    bounds = [(10, 20), (15, 30), (4, 6), (12, 14)]
-    resultado = differential_evolution(
-        objetivo_combinado,
-        bounds,
-        args=(mapped_data,),
-        strategy='best1bin',
-        maxiter=1000,
-        popsize=15,
-        tol=0.001,
-        mutation=(0.5, 1),
-        recombination=0.7,
-        seed=42
-    )
-    
-    variables_optimas = resultado.x
-    metricas_optimas = calcular_metricas(variables_optimas, mapped_data)
-    print(f"Result for {country_data['Country']}: IRR={metricas_optimas['irr']:.2%}, Rate Diff={metricas_optimas['rate_difference']:.4f}")
-    return {
-        'variables_optimas': variables_optimas,
-        'metricas_optimas': metricas_optimas,
-        'diferencia_tasas_minimizada': resultado.fun
-    }
+# Definir límites (bounds) para la optimización de markup y tasa_camaronero
+limites_parametros_fijos = [(4, 6), (12, 14)] # Límites para markup y tasa_camaronero (rangos en porcentaje)
 
-def print_optimization_results(results, country_name):
-    print(f"\n{'='*50}")
-    print(f"Optimal Parameters for {country_name.upper()}")
-    print(f"{'='*50}")
-    print(f"- Factoring Discount: {results['variables_optimas'][0]:.2f}%")
-    print(f"- Principal Percentage: {results['variables_optimas'][1]:.2f}%")
-    print(f"- Funding Markup: {results['variables_optimas'][2]:.2f}%")
-    print(f"- Farmer Interest Rate: {results['variables_optimas'][3]:.2f}%")
-    
-    print(f"\nKey Financial Metrics:")
-    print(f"- ROI: {results['metricas_optimas']['roi']:.2%}")
-    print(f"- ROE: {results['metricas_optimas']['roe']:.2%}")
-    print(f"- Payback Period: {results['metricas_optimas']['payback']:.2f} years")
-    print(f"- IRR: {results['metricas_optimas']['irr']:.2%}")
-    print(f"- NPV: ${results['metricas_optimas']['npv']:,.2f}")
-    print(f"- Profitability Index: {results['metricas_optimas']['pi']:.2f}")
-    print(f"- Rate Spread: {results['metricas_optimas']['rate_difference']:.4f}")  # Use internal rate_difference
+# Optimización utilizando el algoritmo de evolución diferencial
+resultado_fijo = differential_evolution(
+    objetivo_combinado_parametros_fijos, # Función objetivo a minimizar
+    limites_parametros_fijos,           # Límites de los parámetros
+    strategy='best1bin',                # Estrategia de evolución diferencial
+    maxiter=1000,                       # Número máximo de iteraciones
+    popsize=15,                         # Tamaño de la población en cada iteración
+    tol=0.001,                          # Tolerancia para la convergencia
+    mutation=(0.5, 1),                  # Rango de mutación
+    recombination=0.7,                  # Probabilidad de recombinación
+    seed=42                             # Semilla para la reproducibilidad
+)
 
-def analyze_top_opportunities(all_results, top_n=10):
-    """Analyze and display top performing country opportunities."""
-    # Filter valid results and sort by NPV
-    valid_results = [r for r in all_results if r['metricas_optimas']['valid']]
-    sorted_results = sorted(valid_results, 
-                          key=lambda x: x['metricas_optimas']['npv'], 
-                          reverse=True)[:top_n]
+# Extraer resultados de la optimización
+variables_optimas_fijas = resultado_fijo.x # Valores óptimos de markup y tasa_camaronero
+diferencia_tasas_minimizada = resultado_fijo.fun # Valor mínimo de la diferencia de tasas alcanzado
+metricas_optimas_fijas = calcular_metricas_parametros_fijos(variables_optimas_fijas) # Métricas financieras con parámetros óptimos
 
-    print(f"\n{'#'*50}")
-    print(f"TOP {top_n} ARBITRAGE OPPORTUNITIES")
-    print(f"{'#'*50}")
-    
-    for i, result in enumerate(sorted_results, 1):
-        print(f"\n#{i} {result['country'].upper()}")
-        print(f"NPV: ${result['metricas_optimas']['npv']:,.2f} | IRR: {result['metricas_optimas']['irr']:.2%}")
-        print(f"ROE: {result['metricas_optimas']['roe']:.2%} | Rate Spread: {result['diferencia_tasas_minimizada']:.4f}")
-        print(f"Params: Factoring {result['variables_optimas'][0]:.1f}%, "
-              f"Principal {result['variables_optimas'][1]:.1f}%, "
-              f"Markup {result['variables_optimas'][2]:.1f}%")
+# Imprimir resultados de la optimización
+print(f"""
+Parámetros Óptimos para Minimizar la Diferencia de Tasas (con Descuento de Factoring y Principal del Camaronero Fijos) para cumplir con los Objetivos:
+- Markup: {variables_optimas_fijas[0]:.2f}%
+- Tasa de Interés al Camaronero (Anual): {variables_optimas_fijas[1]:.2f}%
+- Descuento de Factoring (Fijo): 10.00%
+- Principal del Camaronero (Fijo): 25.00%
 
-def optimize_and_analyze():
-    simulator = setup_simulator()
-    aerator_price = 1158
-    aerator_quantity = 100
-    client_rate = 0.12
-    horizon = 6
-    factoring_discount = 0.10
-    loan_markup = 2.0
+Diferencia de Tasas Minimizada: {diferencia_tasas_minimizada:.4f}
 
-    # Get country data from simulator
-    _, arbitrage_df = simulator.analyze_opportunities(  # Unpack the tuple
-        aerator_price=aerator_price,
-        aerator_quantity=aerator_quantity,
-        client_rate=client_rate,
-        horizon=horizon,
-        factoring_discount=factoring_discount,
-        loan_markup=loan_markup
-    )
-    
-    all_results = []
-    # Convert DataFrame to list of dicts and process each country
-    for country_data in arbitrage_df.to_dict(orient='records')[:10]: 
-        print(f"Processing {country_data.get('Country', 'Unknown')}: {country_data}") # Use DataFrame rows
-        try:
-            result = optimize_for_country(country_data)
-            result['country'] = country_data['Country']  # Match simulator's key
-            all_results.append(result)
-            print_optimization_results(result, country_data['Country'])
-        except Exception as e:
-            print(f"Error processing {country_data.get('Country', 'Unknown')}: {str(e)}")
-            continue
-    
-    analyze_top_opportunities(all_results)
-    return all_results
+Métricas Alcanzadas:
+- ROI: {metricas_optimas_fijas['roi']:.2%}
+- ROE: {metricas_optimas_fijas['roe']:.2%}
+- Payback Time: {metricas_optimas_fijas['payback']:.2f} años
+- TIR: {metricas_optimas_fijas['irr']:.2%}
+- VPN: ${metricas_optimas_fijas['npv']:,.2f}
+- IR: {metricas_optimas_fijas['pi']:.2f}
 
-# Updated DCF reporting
-def print_dcf_analysis(metricas_optimas):
-    print("Metrics received:", metricas_optimas)
-    """Enhanced DCF analysis reporting."""
-    print(f"\n{'='*50}")
-    print("DCF VALUATION ANALYSIS")
-    print(f"{'='*50}")
-    
-    # Calculate WACC components
-    costo_capital_propio = TASA_LIBRE_DE_RIESGO + BETA_APALANCADO * (RETORNO_MERCADO - TASA_LIBRE_DE_RIESGO)
-    costo_deuda_despues_impuestos = metricas_optimas['tasa_financiamiento_anual'] * (1 - metricas_optimas['corporate_tax'])
-    
-    print("\nCost of Capital Components:")
-    print(f"- Cost of Equity (CAPM): {costo_capital_propio:.2%}")
-    print(f"- After-tax Cost of Debt: {costo_deuda_despues_impuestos:.2%}")
-    
-    # Print final valuation
-    print(f"\nEnterprise Value: ${metricas_optimas.get('valor_empresa', 0):,.2f}")
-    print(f"Equity Value: ${metricas_optimas.get('valor_capital_propio', 0):,.2f}")
+Rangos Objetivo de las Métricas:
+- TIR: 20% - 30%
+- IR: > 1
+- VPN: > 0
+- ROE: 10% - 15%
+- ROI: 20% - 30%
+- Payback Time: <= 6 años
+""")
 
-# Example execution
-if __name__ == "__main__":
-    final_results = optimize_and_analyze()
-    
-    # Add DCF analysis for best result
-    if final_results:
-        best_result = max(final_results, key=lambda x: x['metricas_optimas']['npv'])
-        print_dcf_analysis(best_result['metricas_optimas'])
+# --- Cálculo del Modelo de Flujo de Caja Descontado (DCF) ---
+
+# Parámetros asumidos para el DCF
+TASA_CRECIMIENTO_PERPETUIDAD = 0.02 # Tasa de crecimiento a perpetuidad
+TASA_LIBRE_DE_RIESGO = 0.015 # Tasa libre de riesgo
+RETORNO_MERCADO = 0.08 # Retorno esperado del mercado
+BETA_APALANCADO = 1.2 # Beta apalancado
+
+# Extraer valores relevantes de las métricas óptimas
+utilidad_despues_de_impuestos_anio1 = metricas_optimas_fijas['utilidad_despues_de_impuestos'] # Utilidad después de impuestos del primer año (proxy para FCF)
+capital_propio_optimizado = metricas_optimas_fijas['capital_propio'] # Capital propio óptimo
+monto_financiado_optimizado = metricas_optimas_fijas['monto_financiado'] # Monto financiado óptimo
+tasa_suiza_anual_optima = metricas_optimas_fijas['tasa_suiza_anual'] # Tasa suiza óptima
+TASA_IMPUESTOS_DEF = 0.146 # Tasa de impuestos
+
+# Calcular el Costo del Capital Propio (Ke) utilizando CAPM
+costo_capital_propio = TASA_LIBRE_DE_RIESGO + BETA_APALANCADO * (RETORNO_MERCADO - TASA_LIBRE_DE_RIESGO)
+
+# Calcular el Costo de la Deuda (Kd) después de impuestos
+costo_deuda_antes_de_impuestos = tasa_suiza_anual_optima # Costo de la deuda antes de impuestos es la tasa suiza
+costo_deuda_despues_de_impuestos = costo_deuda_antes_de_impuestos * (1 - TASA_IMPUESTOS_DEF) # Costo de la deuda después de impuestos
+
+# Calcular las Ponderaciones de la Estructura de Capital
+capital_total = capital_propio_optimizado + monto_financiado_optimizado # Capital total
+ponderacion_capital_propio = capital_propio_optimizado / capital_total if capital_total != 0 else 0 # Ponderación del capital propio
+ponderacion_deuda = monto_financiado_optimizado / capital_total if capital_total != 0 else 0 # Ponderación de la deuda
+
+# Calcular el WACC (Costo Promedio Ponderado de Capital)
+WACC = (ponderacion_capital_propio * costo_capital_propio) + (ponderacion_deuda * costo_deuda_despues_de_impuestos)
+
+# Calcular el Valor de la Empresa (Enterprise Value - EV) utilizando el modelo de crecimiento perpetuo
+if WACC <= TASA_CRECIMIENTO_PERPETUIDAD:
+    valor_empresa = np.inf # Evitar división por cero o denominador negativo
+else:
+    valor_empresa = utilidad_despues_de_impuestos_anio1 * (1 + TASA_CRECIMIENTO_PERPETUIDAD) / (WACC - TASA_CRECIMIENTO_PERPETUIDAD)
+
+# Calcular el Valor del Capital Propio (Equity Value)
+valor_capital_propio = valor_empresa - monto_financiado_optimizado
+
+# Imprimir resultados del modelo DCF
+print(f"""
+
+--- Modelo de Flujo de Caja Descontado (DCF) ---
+
+Supuestos:
+- Tasa de Crecimiento a Perpetuidad: {TASA_CRECIMIENTO_PERPETUIDAD:.2%}
+- Tasa Libre de Riesgo: {TASA_LIBRE_DE_RIESGO:.2%}
+- Retorno del Mercado: {RETORNO_MERCADO:.2%}
+- Beta Apalancado: {BETA_APALANCADO:.1f}
+
+Valores Calculados:
+- Utilidad Después de Impuestos Año 1 (Proxy FCF): ${utilidad_despues_de_impuestos_anio1:,.2f}
+- Costo del Capital Propio (Ke): {costo_capital_propio:.2%}
+- Costo de la Deuda (Después de Impuestos) (Kd): {costo_deuda_despues_de_impuestos:.2%}
+- Ponderación del Capital Propio: {ponderacion_capital_propio:.2%}
+- Ponderación de la Deuda: {ponderacion_deuda:.2%}
+- WACC: {WACC:.2%}
+
+Valoración:
+- Valor de la Empresa (EV): ${valor_empresa:,.2f}
+- Valor del Capital Propio: ${valor_capital_propio:,.2f}
+""")
