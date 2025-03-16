@@ -10,10 +10,10 @@ from IPython.display import display
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Define paths
-directorio_datos = "/home/luisvinatea/Dev/Repos/aquaculture/beraqua/notebooks/datasets/indicators/forex"
-directorio_ecuador = "/home/luisvinatea/Dev/Repos/aquaculture/beraqua/notebooks/datasets/shrimp_industry/ecuador"
-ruta_currency_tickers_csv = "/home/luisvinatea/Dev/Repos/aquaculture/beraqua/notebooks/datasets/indicators/forex/currency_tickers.csv"
-shapefile_path = "/home/luisvinatea/Dev/Repos/aquaculture/beraqua/data/shapefiles/ne_110m_admin_0_countries.shp"
+directorio_datos = "/home/luisvinatea/Dev/Repos/aquaculture/data/datasets/indicators/forex"
+directorio_ecuador = "/home/luisvinatea/Dev/Repos/aquaculture/data/datasets/shrimp_industry/ecuador"
+ruta_currency_tickers_csv = "/home/luisvinatea/Dev/Repos/aquaculture/data/datasets/indicators/forex/currency_tickers.csv"
+shapefile_path = "/home/luisvinatea/Dev/Repos/aquaculture/data/shapefiles/ne_110m_admin_0_countries.shp"
 
 def run_pipeline():
     # Step 1: Clean and process data

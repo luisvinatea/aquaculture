@@ -112,8 +112,8 @@ class CSVProcessor:
             print(f"Error processing shapefile: {e}")
 
 if __name__ == "__main__":
-    directory_to_process = "/home/luisvinatea/Dev/Repos/aquaculture/beraqua/notebooks/datasets/indicators/forex"
-    currency_tickers_path = "/home/luisvinatea/Dev/Repos/aquaculture/beraqua/notebooks/datasets/indicators/forex/currency_tickers.csv"
+    directory_to_process = "/home/luisvinatea/Dev/Repos/aquaculture/data/datasets/indicators/forex"
+    currency_tickers_path = "/home/luisvinatea/Dev/Repos/aquaculture/data/datasets/indicators/forex/currency_tickers.csv"
     shapefile_path = "/home/luisvinatea/Dev/Repos/aquaculture/beraqua/data/shapefiles/ne_110m_admin_0_countries.shp"
     
     processor = CSVProcessor(directory_to_process, currency_tickers_path, shapefile_path)

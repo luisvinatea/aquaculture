@@ -54,8 +54,8 @@ class ArbitrageAnalyzer:
             return None
 
 if __name__ == "__main__":
-    data_directory = "/home/luisvinatea/Dev/Repos/aquaculture/beraqua/notebooks/datasets/indicators/forex"
-    ecuador_directory = "/home/luisvinatea/Dev/Repos/aquaculture/beraqua/notebooks/datasets/shrimp_industry/ecuador"
+    data_directory = "/home/luisvinatea/Dev/Repos/aquaculture/data/datasets/indicators/forex"
+    ecuador_directory = "/home/luisvinatea/Dev/Repos/aquaculture/data/datasets/shrimp_industry/ecuador"
     
     analyzer = ArbitrageAnalyzer(data_directory, ecuador_directory)
     analyzer.load_data()

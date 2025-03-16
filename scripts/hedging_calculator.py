@@ -89,8 +89,8 @@ class HedgingCostCalculator:
 # Example usage (for testing)
 if __name__ == "__main__":
     # Paths to the CSV files
-    forward_proxy_path = "/home/luisvinatea/Dev/Repos/aquaculture/beraqua/notebooks/datasets/indicators/forex/forward_proxy.csv" # Renamed to forward_proxy_path
-    inflation_proxy_path = "/home/luisvinatea/Dev/Repos/aquaculture/beraqua/notebooks/datasets/indicators/forex/inflation_proxy.csv" # Path to the inflation proxy file
+    forward_proxy_path = "/home/luisvinatea/Dev/Repos/aquaculture/data/datasets/indicators/forex/forward_proxy.csv" # Renamed to forward_proxy_path
+    inflation_proxy_path = "/home/luisvinatea/Dev/Repos/aquaculture/data/datasets/indicators/forex/inflation_proxy.csv" # Path to the inflation proxy file
 
     # Initialize the calculator
     calculator = HedgingCostCalculator(inflation_proxy_path, forward_proxy_path) # verbose defaults to True

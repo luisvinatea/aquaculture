@@ -92,7 +92,7 @@ class ArbitrageAnalyzer:
 
 
 if __name__ == "__main__":
-    data_directory = "/home/luisvinatea/Dev/Repos/aquaculture/beraqua/notebooks/datasets/indicators/forex"
+    data_directory = "/home/luisvinatea/Dev/Repos/aquaculture/data/datasets/indicators/forex"
     forward_proxy_path = os.path.join(data_directory, "forward_proxy.csv") # Path to forward_proxy.csv
     inflation_proxy_path = os.path.join(data_directory, "inflation_proxy.csv") # Path to inflation_proxy.csv
     analyzer = ArbitrageAnalyzer(data_directory, forward_proxy_path, inflation_proxy_path)
