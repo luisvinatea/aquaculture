@@ -1,7 +1,6 @@
 # Ignore dataset files
 *.tsv
 *.xml
-*.xlsx
 *.xls
 *.parquet
 *.hdf5
