@@ -1,0 +1,1493 @@
+{
+    "afghanistan": {
+        "currency_ticker": "afn",
+        "inflation_rate": -0.8,
+        "corporate_tax": 20.0
+    },
+    "albania": {
+        "currency_ticker": "all",
+        "inflation_rate": 1.9,
+        "deposit_rate": 1.75,
+        "te": 37,
+        "corporate_tax": 15.0,
+        "interest_rate": 2.75
+    },
+    "algeria": {
+        "currency_ticker": "dzd",
+        "inflation_rate": -1.5,
+        "deposit_rate": 1.75,
+        "corporate_tax": 26.0,
+        "interest_rate": 3.0
+    },
+    "andorra": {
+        "currency_ticker": "eur",
+        "te": 66,
+        "interest_rate": 2.9
+    },
+    "angola": {
+        "currency_ticker": "aoa",
+        "interbank_rate": 20.62,
+        "inflation_rate": 26.48,
+        "deposit_rate": 6.88,
+        "te": 25,
+        "corporate_tax": 25.0,
+        "interest_rate": 19.5
+    },
+    "antigua_and_barbuda": {
+        "currency_ticker": "xcd",
+        "deposit_rate": 1.64
+    },
+    "argentina": {
+        "currency_ticker": "ars",
+        "interbank_rate": 36.1,
+        "inflation_rate": 84.5,
+        "deposit_rate": 31.3,
+        "te": 13,
+        "corporate_tax": 35.0,
+        "interest_rate": 29.0
+    },
+    "armenia": {
+        "currency_ticker": "amd",
+        "inflation_rate": 1.7,
+        "deposit_rate": 5.25,
+        "te": 38,
+        "corporate_tax": 18.0,
+        "interest_rate": 6.75
+    },
+    "aruba": {
+        "currency_ticker": "awg",
+        "inflation_rate": 0.3,
+        "deposit_rate": 2.8,
+        "te": 55,
+        "corporate_tax": 22.0
+    },
+    "australia": {
+        "currency_ticker": "aud",
+        "interbank_rate": 4.34,
+        "inflation_rate": 2.4,
+        "deposit_rate": 3.2,
+        "interest_yield": 4.502,
+        "te": 100,
+        "corporate_tax": 30.0,
+        "interest_rate": 4.1
+    },
+    "austria": {
+        "currency_ticker": "eur",
+        "interbank_rate": 2.7,
+        "inflation_rate": 3.2,
+        "interest_yield": 2.906,
+        "te": 96,
+        "corporate_tax": 23.0,
+        "interest_rate": 2.9
+    },
+    "azerbaijan": {
+        "currency_ticker": "azn",
+        "inflation_rate": 5.4,
+        "deposit_rate": 8.65,
+        "te": 50,
+        "corporate_tax": 20.0,
+        "interest_rate": 7.25
+    },
+    "bahamas": {
+        "currency_ticker": "bsd",
+        "inflation_rate": -1.0,
+        "deposit_rate": 0.54,
+        "te": 37,
+        "corporate_tax": 0.0,
+        "interest_rate": 4.0
+    },
+    "bahrain": {
+        "currency_ticker": "bhd",
+        "interbank_rate": 5.69,
+        "inflation_rate": 0.5,
+        "te": 33,
+        "corporate_tax": 0.0,
+        "interest_rate": 5.25
+    },
+    "bangladesh": {
+        "currency_ticker": "bdt",
+        "interbank_rate": 10.07,
+        "inflation_rate": 9.94,
+        "deposit_rate": 6.52,
+        "te": 35,
+        "corporate_tax": 27.5,
+        "interest_rate": 10.0
+    },
+    "barbados": {
+        "currency_ticker": "bbd",
+        "inflation_rate": 0.4,
+        "deposit_rate": 0.14,
+        "te": 28,
+        "corporate_tax": 5.5,
+        "interest_rate": 2.0
+    },
+    "belarus": {
+        "currency_ticker": "byn",
+        "inflation_rate": 5.2,
+        "deposit_rate": 9.72,
+        "te": 11,
+        "corporate_tax": 25.0,
+        "interest_rate": 9.5
+    },
+    "belgium": {
+        "currency_ticker": "eur",
+        "interbank_rate": 2.7,
+        "inflation_rate": 4.08,
+        "interest_yield": 3.076,
+        "te": 87,
+        "corporate_tax": 25.0,
+        "interest_rate": 2.9
+    },
+    "belize": {
+        "currency_ticker": "bzd",
+        "inflation_rate": 2.6,
+        "deposit_rate": 2.08,
+        "te": 20,
+        "interest_rate": 2.25
+    },
+    "benin": {
+        "currency_ticker": "xof",
+        "interbank_rate": 6.2,
+        "inflation_rate": 0.6,
+        "te": 36,
+        "corporate_tax": 30.0,
+        "interest_rate": 5.5
+    },
+    "bermuda": {
+        "currency_ticker": "bmd",
+        "inflation_rate": 1.1,
+        "te": 78,
+        "corporate_tax": 0.0
+    },
+    "bhutan": {
+        "currency_ticker": "btn",
+        "inflation_rate": 2.2,
+        "deposit_rate": 3.75,
+        "interest_rate": 6.8
+    },
+    "bolivia": {
+        "currency_ticker": "bob",
+        "inflation_rate": 12.03,
+        "deposit_rate": 3.18,
+        "te": 16,
+        "corporate_tax": 25.0,
+        "interest_rate": 3.21
+    },
+    "bosnia_and_herzegovina": {
+        "currency_ticker": "bam",
+        "inflation_rate": 2.2,
+        "deposit_rate": 1.18,
+        "te": 27,
+        "corporate_tax": 10.0,
+        "interest_rate": 4.08
+    },
+    "botswana": {
+        "currency_ticker": "bwp",
+        "inflation_rate": 2.5,
+        "deposit_rate": 2.09,
+        "te": 67,
+        "corporate_tax": 22.0,
+        "interest_rate": 1.9
+    },
+    "brazil": {
+        "currency_ticker": "brl",
+        "interbank_rate": 13.15,
+        "inflation_rate": 4.56,
+        "interest_yield": 14.665,
+        "te": 45,
+        "corporate_tax": 34.0,
+        "interest_rate": 13.25
+    },
+    "brunei": {
+        "currency_ticker": "bnd",
+        "inflation_rate": -0.4,
+        "deposit_rate": 0.18,
+        "corporate_tax": 18.5,
+        "interest_rate": 5.5
+    },
+    "bulgaria": {
+        "currency_ticker": "bgn",
+        "inflation_rate": 3.7,
+        "deposit_rate": 0.08,
+        "te": 61,
+        "corporate_tax": 10.0,
+        "interest_rate": 2.82
+    },
+    "burkina_faso": {
+        "currency_ticker": "xof",
+        "interbank_rate": 6.2,
+        "inflation_rate": 4.9,
+        "te": 20,
+        "corporate_tax": 27.5,
+        "interest_rate": 5.5
+    },
+    "cambodia": {
+        "currency_ticker": "khr",
+        "inflation_rate": 3.05,
+        "deposit_rate": 1.54,
+        "te": 30,
+        "corporate_tax": 20.0,
+        "interest_rate": 0.77
+    },
+    "cameroon": {
+        "currency_ticker": "xaf",
+        "inflation_rate": 5.0,
+        "te": 23,
+        "corporate_tax": 33.0,
+        "interest_rate": 5.0
+    },
+    "canada": {
+        "currency_ticker": "cad",
+        "inflation_rate": 1.9,
+        "interest_yield": 3.105,
+        "te": 100,
+        "corporate_tax": 26.5,
+        "interest_rate": 3.0
+    },
+    "cape_verde": {
+        "currency_ticker": "cve",
+        "inflation_rate": 2.1,
+        "deposit_rate": 0.76,
+        "te": 27,
+        "interest_rate": 2.25
+    },
+    "cayman_islands": {
+        "currency_ticker": "kyd",
+        "inflation_rate": 1.7,
+        "te": 85,
+        "corporate_tax": 0.0
+    },
+    "chad": {
+        "currency_ticker": "xaf",
+        "inflation_rate": 7.0,
+        "te": 25,
+        "corporate_tax": 35.0,
+        "interest_rate": 5.0
+    },
+    "chile": {
+        "currency_ticker": "clp",
+        "interbank_rate": 4.92,
+        "inflation_rate": 4.9,
+        "deposit_rate": 10.41,
+        "interest_yield": 5.99,
+        "te": 73,
+        "corporate_tax": 27.0,
+        "interest_rate": 5.0
+    },
+    "china": {
+        "currency_ticker": "cny",
+        "interbank_rate": 1.8,
+        "inflation_rate": 0.5,
+        "interest_yield": 1.812,
+        "te": 78,
+        "corporate_tax": 25.0,
+        "interest_rate": 3.1
+    },
+    "colombia": {
+        "currency_ticker": "cop",
+        "interbank_rate": 9.49,
+        "inflation_rate": 5.22,
+        "deposit_rate": 13.21,
+        "interest_yield": 11.2,
+        "te": 55,
+        "corporate_tax": 35.0,
+        "interest_rate": 9.5
+    },
+    "comoros": {
+        "currency_ticker": "kmf",
+        "inflation_rate": 2.1,
+        "deposit_rate": 2.06
+    },
+    "republic_of_the_congo": {
+        "currency_ticker": "xaf",
+        "inflation_rate": 1.8,
+        "te": 18,
+        "corporate_tax": 28.0,
+        "interest_rate": 5.0
+    },
+    "costa_rica": {
+        "currency_ticker": "crc",
+        "inflation_rate": 1.14,
+        "deposit_rate": 5.07,
+        "te": 41,
+        "corporate_tax": 30.0,
+        "interest_rate": 4.0
+    },
+    "croatia": {
+        "currency_ticker": "eur",
+        "inflation_rate": 4.0,
+        "deposit_rate": 0.02,
+        "interest_yield": 3.115,
+        "te": 66,
+        "corporate_tax": 18.0,
+        "interest_rate": 2.9
+    },
+    "cyprus": {
+        "currency_ticker": "eur",
+        "inflation_rate": 2.5,
+        "te": 66,
+        "corporate_tax": 12.5,
+        "interest_rate": 2.9
+    },
+    "czech_republic": {
+        "currency_ticker": "czk",
+        "inflation_rate": 2.8,
+        "deposit_rate": 3.0,
+        "interest_yield": 4.099,
+        "te": 85,
+        "corporate_tax": 21.0,
+        "interest_rate": 3.75
+    },
+    "denmark": {
+        "currency_ticker": "dkk",
+        "interbank_rate": 2.43,
+        "inflation_rate": 1.5,
+        "interest_yield": 2.212,
+        "te": 100,
+        "corporate_tax": 22.0,
+        "interest_rate": 2.35
+    },
+    "dominica": {
+        "currency_ticker": "xcd",
+        "deposit_rate": 1.63
+    },
+    "dominican_republic": {
+        "currency_ticker": "dop",
+        "inflation_rate": 3.32,
+        "deposit_rate": 8.85,
+        "te": 41,
+        "corporate_tax": 27.0,
+        "interest_rate": 5.75
+    },
+    "east_timor": {
+        "currency_ticker": "usd",
+        "inflation_rate": -0.2,
+        "deposit_rate": 0.6
+    },
+    "ecuador": {
+        "currency_ticker": "usd",
+        "inflation_rate": 0.26,
+        "deposit_rate": 5.86,
+        "te": 20,
+        "corporate_tax": 25.0,
+        "interest_rate": 9.8
+    },
+    "egypt": {
+        "currency_ticker": "egp",
+        "interbank_rate": 27.49,
+        "inflation_rate": 24.0,
+        "deposit_rate": 20.7,
+        "te": 23,
+        "corporate_tax": 22.5,
+        "interest_rate": 27.25
+    },
+    "el_salvador": {
+        "currency_ticker": "usd",
+        "inflation_rate": 0.31,
+        "te": 21,
+        "corporate_tax": 30.0,
+        "interest_rate": 5.53
+    },
+    "equatorial_guinea": {
+        "currency_ticker": "xaf",
+        "inflation_rate": 2.5,
+        "corporate_tax": 35.0,
+        "interest_rate": 5.0
+    },
+    "estonia": {
+        "currency_ticker": "eur",
+        "inflation_rate": 3.9,
+        "te": 80,
+        "corporate_tax": 20.0,
+        "interest_rate": 2.9
+    },
+    "ethiopia": {
+        "currency_ticker": "etb",
+        "inflation_rate": 17.0,
+        "te": 15,
+        "corporate_tax": 30.0,
+        "interest_rate": 7.0
+    },
+    "euro_area": {
+        "currency_ticker": "eur",
+        "interbank_rate": 2.52,
+        "inflation_rate": 2.5,
+        "deposit_rate": 2.75,
+        "corporate_tax": 23.0,
+        "interest_rate": 2.9
+    },
+    "european_union": {
+        "currency_ticker": "eur",
+        "te": 98,
+        "corporate_tax": 21.2,
+        "interest_rate": 2.9
+    },
+    "fiji": {
+        "currency_ticker": "fjd",
+        "inflation_rate": 4.0,
+        "deposit_rate": 1.2,
+        "te": 35,
+        "corporate_tax": 25.0,
+        "interest_rate": 0.25
+    },
+    "finland": {
+        "currency_ticker": "eur",
+        "interbank_rate": 2.52,
+        "inflation_rate": 0.7,
+        "interest_yield": 2.803,
+        "te": 96,
+        "corporate_tax": 20.0,
+        "interest_rate": 2.9
+    },
+    "france": {
+        "currency_ticker": "eur",
+        "interbank_rate": 2.7,
+        "inflation_rate": 1.7,
+        "interest_yield": 3.236,
+        "te": 90,
+        "corporate_tax": 25.0,
+        "interest_rate": 2.9
+    },
+    "gabon": {
+        "currency_ticker": "xaf",
+        "inflation_rate": 0.7,
+        "te": 23,
+        "corporate_tax": 30.0,
+        "interest_rate": 5.0
+    },
+    "gambia": {
+        "currency_ticker": "gmd",
+        "inflation_rate": 10.27,
+        "corporate_tax": 27.0,
+        "interest_rate": 17.0
+    },
+    "georgia": {
+        "currency_ticker": "gel",
+        "inflation_rate": 2.0,
+        "deposit_rate": 10.82,
+        "te": 45,
+        "corporate_tax": 15.0,
+        "interest_rate": 8.0
+    },
+    "germany": {
+        "currency_ticker": "eur",
+        "interbank_rate": 2.7,
+        "inflation_rate": 2.3,
+        "interest_yield": 2.487,
+        "te": 100,
+        "corporate_tax": 30.0,
+        "interest_rate": 2.9
+    },
+    "ghana": {
+        "currency_ticker": "ghs",
+        "inflation_rate": 23.5,
+        "te": 11,
+        "corporate_tax": 25.0,
+        "interest_rate": 27.0
+    },
+    "greece": {
+        "currency_ticker": "eur",
+        "inflation_rate": 2.7,
+        "interest_yield": 3.324,
+        "te": 51,
+        "corporate_tax": 22.0,
+        "interest_rate": 2.9
+    },
+    "grenada": {
+        "currency_ticker": "xcd",
+        "deposit_rate": 0.88
+    },
+    "guam": {
+        "currency_ticker": "usd",
+        "corporate_tax": 21.0
+    },
+    "guatemala": {
+        "currency_ticker": "gtq",
+        "inflation_rate": 0.99,
+        "deposit_rate": 4.21,
+        "te": 46,
+        "corporate_tax": 25.0,
+        "interest_rate": 4.5
+    },
+    "guinea": {
+        "currency_ticker": "gnf",
+        "inflation_rate": 3.1,
+        "corporate_tax": 30.0,
+        "interest_rate": 11.0
+    },
+    "guinea_bissau": {
+        "currency_ticker": "xof",
+        "interbank_rate": 6.2,
+        "inflation_rate": 5.7,
+        "interest_rate": 5.5
+    },
+    "guyana": {
+        "currency_ticker": "gyd",
+        "inflation_rate": 2.9,
+        "deposit_rate": 0.78,
+        "interest_rate": 5.0
+    },
+    "haiti": {
+        "currency_ticker": "htg",
+        "inflation_rate": 28.5,
+        "deposit_rate": 4.7,
+        "interest_rate": 17.0
+    },
+    "honduras": {
+        "currency_ticker": "hnl",
+        "inflation_rate": 4.27,
+        "deposit_rate": 5.94,
+        "te": 37,
+        "corporate_tax": 25.0,
+        "interest_rate": 5.75
+    },
+    "hong_kong": {
+        "currency_ticker": "hkd",
+        "interbank_rate": 4.06,
+        "inflation_rate": 2.0,
+        "interest_yield": 3.706,
+        "te": 88,
+        "corporate_tax": 16.5,
+        "interest_rate": 4.75
+    },
+    "hungary": {
+        "currency_ticker": "huf",
+        "interbank_rate": 6.51,
+        "inflation_rate": 5.5,
+        "deposit_rate": 5.5,
+        "interest_yield": 6.71,
+        "te": 58,
+        "corporate_tax": 9.0,
+        "interest_rate": 6.5
+    },
+    "iceland": {
+        "currency_ticker": "isk",
+        "interbank_rate": 8.15,
+        "inflation_rate": 4.6,
+        "interest_yield": 6.894,
+        "te": 76,
+        "corporate_tax": 21.0,
+        "interest_rate": 8.0
+    },
+    "india": {
+        "currency_ticker": "inr",
+        "interbank_rate": 7.19,
+        "inflation_rate": 4.31,
+        "interest_yield": 6.755,
+        "te": 56,
+        "corporate_tax": 34.94,
+        "interest_rate": 6.25
+    },
+    "indonesia": {
+        "currency_ticker": "idr",
+        "interbank_rate": 6.69,
+        "inflation_rate": 0.76,
+        "deposit_rate": 5.0,
+        "interest_yield": 6.884,
+        "te": 60,
+        "corporate_tax": 22.0,
+        "interest_rate": 5.75
+    },
+    "iraq": {
+        "currency_ticker": "iqd",
+        "inflation_rate": 2.9,
+        "te": 23,
+        "corporate_tax": 15.0,
+        "interest_rate": 5.5
+    },
+    "ireland": {
+        "currency_ticker": "eur",
+        "interbank_rate": 2.74,
+        "inflation_rate": 1.9,
+        "interest_yield": 2.784,
+        "te": 88,
+        "corporate_tax": 12.5,
+        "interest_rate": 2.9
+    },
+    "isle_of_man": {
+        "currency_ticker": "gbp",
+        "te": 87,
+        "corporate_tax": 0.0
+    },
+    "israel": {
+        "currency_ticker": "ils",
+        "interbank_rate": 4.5,
+        "inflation_rate": 3.8,
+        "interest_yield": 4.273,
+        "te": 73,
+        "corporate_tax": 23.0,
+        "interest_rate": 4.5
+    },
+    "italy": {
+        "currency_ticker": "eur",
+        "interbank_rate": 2.7,
+        "inflation_rate": 1.5,
+        "interest_yield": 3.569,
+        "te": 62,
+        "corporate_tax": 24.0,
+        "interest_rate": 2.9
+    },
+    "ivory_coast": {
+        "currency_ticker": "xof",
+        "interbank_rate": 6.2,
+        "inflation_rate": 2.5,
+        "te": 41,
+        "corporate_tax": 25.0,
+        "interest_rate": 5.5
+    },
+    "jamaica": {
+        "currency_ticker": "jmd",
+        "inflation_rate": 4.7,
+        "deposit_rate": 5.8,
+        "te": 38,
+        "corporate_tax": 25.0,
+        "interest_rate": 6.0
+    },
+    "japan": {
+        "currency_ticker": "jpy",
+        "interbank_rate": 0.8,
+        "inflation_rate": 4.0,
+        "deposit_rate": 0.12,
+        "interest_yield": 1.428,
+        "te": 77,
+        "corporate_tax": 30.62,
+        "interest_rate": 0.5
+    },
+    "jordan": {
+        "currency_ticker": "jod",
+        "interbank_rate": 6.35,
+        "inflation_rate": 2.3,
+        "deposit_rate": 5.87,
+        "te": 38,
+        "corporate_tax": 20.0,
+        "interest_rate": 6.5
+    },
+    "kazakhstan": {
+        "currency_ticker": "kzt",
+        "inflation_rate": 8.9,
+        "te": 58,
+        "corporate_tax": 20.0,
+        "interest_rate": 15.25
+    },
+    "kenya": {
+        "currency_ticker": "kes",
+        "interbank_rate": 10.68,
+        "inflation_rate": 3.3,
+        "deposit_rate": 9.17,
+        "interest_yield": 13.64,
+        "te": 23,
+        "corporate_tax": 30.0,
+        "interest_rate": 10.75
+    },
+    "kosovo": {
+        "currency_ticker": "eur",
+        "inflation_rate": 1.5,
+        "corporate_tax": 10.0,
+        "interest_rate": 2.9
+    },
+    "kuwait": {
+        "currency_ticker": "kwd",
+        "inflation_rate": 2.5,
+        "deposit_rate": 2.5,
+        "te": 81,
+        "corporate_tax": 15.0,
+        "interest_rate": 4.0
+    },
+    "kyrgyzstan": {
+        "currency_ticker": "kgs",
+        "inflation_rate": 6.7,
+        "deposit_rate": 3.32,
+        "te": 27,
+        "interest_rate": 9.0
+    },
+    "laos": {
+        "currency_ticker": "lak",
+        "inflation_rate": 15.5,
+        "te": 15,
+        "corporate_tax": 20.0,
+        "interest_rate": 10.0
+    },
+    "latvia": {
+        "currency_ticker": "eur",
+        "inflation_rate": 3.0,
+        "te": 72,
+        "corporate_tax": 20.0,
+        "interest_rate": 2.9
+    },
+    "lebanon": {
+        "currency_ticker": "lbp",
+        "inflation_rate": 16.1,
+        "deposit_rate": 1.17,
+        "te": 8,
+        "corporate_tax": 17.0,
+        "interest_rate": 20.0
+    },
+    "lesotho": {
+        "currency_ticker": "lsl",
+        "inflation_rate": 3.7,
+        "deposit_rate": 4.74,
+        "te": 30,
+        "corporate_tax": 25.0,
+        "interest_rate": 7.5
+    },
+    "libya": {
+        "currency_ticker": "lyd",
+        "inflation_rate": 2.3,
+        "corporate_tax": 24.0,
+        "interest_rate": 3.0
+    },
+    "liechtenstein": {
+        "currency_ticker": "chf",
+        "inflation_rate": 0.4,
+        "te": 100,
+        "corporate_tax": 12.5
+    },
+    "lithuania": {
+        "currency_ticker": "eur",
+        "interbank_rate": 2.7,
+        "inflation_rate": 3.6,
+        "interest_yield": 3.21,
+        "te": 76,
+        "corporate_tax": 16.0,
+        "interest_rate": 2.9
+    },
+    "luxembourg": {
+        "currency_ticker": "eur",
+        "inflation_rate": 1.94,
+        "te": 100,
+        "corporate_tax": 23.87,
+        "interest_rate": 2.9
+    },
+    "macau": {
+        "currency_ticker": "mop",
+        "interbank_rate": 3.8,
+        "inflation_rate": 0.57,
+        "deposit_rate": 0.64,
+        "te": 87,
+        "corporate_tax": 12.0,
+        "interest_rate": 4.75
+    },
+    "macedonia": {
+        "currency_ticker": "mkd",
+        "inflation_rate": 4.9,
+        "deposit_rate": 3.95,
+        "te": 45,
+        "corporate_tax": 10.0,
+        "interest_rate": 5.35
+    },
+    "madagascar": {
+        "currency_ticker": "mga",
+        "inflation_rate": 7.8,
+        "deposit_rate": 12.0,
+        "te": 25,
+        "corporate_tax": 20.0,
+        "interest_rate": 9.5
+    },
+    "malawi": {
+        "currency_ticker": "mwk",
+        "inflation_rate": 28.5,
+        "corporate_tax": 30.0,
+        "interest_rate": 26.0
+    },
+    "malaysia": {
+        "currency_ticker": "myr",
+        "inflation_rate": 1.7,
+        "deposit_rate": 2.63,
+        "interest_yield": 3.834,
+        "te": 68,
+        "corporate_tax": 24.0,
+        "interest_rate": 3.0
+    },
+    "maldives": {
+        "currency_ticker": "mvr",
+        "inflation_rate": 4.8,
+        "deposit_rate": 1.5,
+        "te": 22,
+        "corporate_tax": 15.0,
+        "interest_rate": 7.0
+    },
+    "malta": {
+        "currency_ticker": "eur",
+        "inflation_rate": 1.8,
+        "te": 75,
+        "corporate_tax": 35.0,
+        "interest_rate": 2.9
+    },
+    "mauritania": {
+        "currency_ticker": "mru",
+        "inflation_rate": 1.1,
+        "corporate_tax": 25.0,
+        "interest_rate": 6.75
+    },
+    "mauritius": {
+        "currency_ticker": "mur",
+        "inflation_rate": 1.9,
+        "deposit_rate": 4.58,
+        "te": 55,
+        "corporate_tax": 15.0,
+        "interest_rate": 4.5
+    },
+    "mexico": {
+        "currency_ticker": "mxn",
+        "interbank_rate": 10.28,
+        "inflation_rate": 3.59,
+        "deposit_rate": 4.08,
+        "interest_yield": 9.766,
+        "te": 58,
+        "corporate_tax": 30.0,
+        "interest_rate": 9.5
+    },
+    "micronesia": {
+        "currency_ticker": "usd",
+        "deposit_rate": 0.04,
+        "corporate_tax": 21.0
+    },
+    "moldova": {
+        "currency_ticker": "mdl",
+        "inflation_rate": 9.1,
+        "deposit_rate": 3.6,
+        "te": 25,
+        "corporate_tax": 12.0,
+        "interest_rate": 6.5
+    },
+    "mongolia": {
+        "currency_ticker": "mnt",
+        "interbank_rate": 9.67,
+        "inflation_rate": 9.6,
+        "deposit_rate": 11.83,
+        "te": 31,
+        "corporate_tax": 25.0,
+        "interest_rate": 10.0
+    },
+    "montenegro": {
+        "currency_ticker": "eur",
+        "inflation_rate": 2.8,
+        "te": 35,
+        "corporate_tax": 15.0,
+        "interest_rate": 2.9
+    },
+    "morocco": {
+        "currency_ticker": "mad",
+        "inflation_rate": 2.0,
+        "deposit_rate": 2.79,
+        "te": 50,
+        "corporate_tax": 33.0,
+        "interest_rate": 2.5
+    },
+    "mozambique": {
+        "currency_ticker": "mzn",
+        "inflation_rate": 4.69,
+        "deposit_rate": 7.26,
+        "te": 18,
+        "corporate_tax": 32.0,
+        "interest_rate": 12.25
+    },
+    "myanmar": {
+        "currency_ticker": "mmk",
+        "inflation_rate": 28.58,
+        "corporate_tax": 22.0,
+        "interest_rate": 9.0
+    },
+    "namibia": {
+        "currency_ticker": "nad",
+        "inflation_rate": 3.2,
+        "deposit_rate": 5.39,
+        "te": 37,
+        "corporate_tax": 31.0,
+        "interest_rate": 6.75
+    },
+    "nepal": {
+        "currency_ticker": "npr",
+        "interbank_rate": 3.0,
+        "inflation_rate": 5.41,
+        "interest_rate": 6.5
+    },
+    "netherlands": {
+        "currency_ticker": "eur",
+        "inflation_rate": 3.3,
+        "interest_yield": 2.685,
+        "te": 100,
+        "corporate_tax": 25.8,
+        "interest_rate": 2.9
+    },
+    "new_zealand": {
+        "currency_ticker": "nzd",
+        "interbank_rate": 3.77,
+        "inflation_rate": 2.2,
+        "deposit_rate": 4.33,
+        "interest_yield": 4.632,
+        "te": 95,
+        "corporate_tax": 28.0,
+        "interest_rate": 3.75
+    },
+    "nicaragua": {
+        "currency_ticker": "nio",
+        "inflation_rate": 2.73,
+        "deposit_rate": 2.12,
+        "te": 30,
+        "corporate_tax": 30.0,
+        "interest_rate": 6.25
+    },
+    "nigeria": {
+        "currency_ticker": "ngn",
+        "interbank_rate": 32.5,
+        "inflation_rate": 24.48,
+        "deposit_rate": 11.99,
+        "interest_yield": 19.565,
+        "te": 23,
+        "corporate_tax": 30.0,
+        "interest_rate": 27.5
+    },
+    "norway": {
+        "currency_ticker": "nok",
+        "interbank_rate": 4.5,
+        "inflation_rate": 2.3,
+        "deposit_rate": 3.5,
+        "interest_yield": 3.984,
+        "te": 99,
+        "corporate_tax": 22.0,
+        "interest_rate": 4.5
+    },
+    "oman": {
+        "currency_ticker": "omr",
+        "inflation_rate": 1.0,
+        "deposit_rate": 4.15,
+        "te": 51,
+        "corporate_tax": 15.0,
+        "interest_rate": 5.0
+    },
+    "pakistan": {
+        "currency_ticker": "pkr",
+        "interbank_rate": 11.4,
+        "inflation_rate": 2.4,
+        "interest_yield": 12.596,
+        "te": 16,
+        "corporate_tax": 29.0,
+        "interest_rate": 12.0
+    },
+    "panama": {
+        "currency_ticker": "pab",
+        "inflation_rate": -0.18,
+        "te": 53,
+        "corporate_tax": 25.0
+    },
+    "papua_new_guinea": {
+        "currency_ticker": "pgk",
+        "inflation_rate": -0.9,
+        "deposit_rate": 0.34,
+        "te": 27,
+        "corporate_tax": 30.0,
+        "interest_rate": 4.0
+    },
+    "paraguay": {
+        "currency_ticker": "pyg",
+        "inflation_rate": 3.8,
+        "deposit_rate": 3.42,
+        "te": 51,
+        "corporate_tax": 10.0,
+        "interest_rate": 6.0
+    },
+    "peru": {
+        "currency_ticker": "pen",
+        "inflation_rate": 1.85,
+        "deposit_rate": 4.82,
+        "te": 60,
+        "corporate_tax": 29.5,
+        "interest_rate": 4.75
+    },
+    "philippines": {
+        "currency_ticker": "php",
+        "inflation_rate": 2.9,
+        "deposit_rate": 5.25,
+        "interest_yield": 6.131,
+        "te": 61,
+        "corporate_tax": 25.0,
+        "interest_rate": 5.75
+    },
+    "poland": {
+        "currency_ticker": "pln",
+        "interbank_rate": 5.87,
+        "inflation_rate": 5.3,
+        "deposit_rate": 5.25,
+        "interest_yield": 5.825,
+        "te": 71,
+        "corporate_tax": 19.0,
+        "interest_rate": 5.75
+    },
+    "portugal": {
+        "currency_ticker": "eur",
+        "interbank_rate": 2.7,
+        "inflation_rate": 2.5,
+        "interest_yield": 3.007,
+        "te": 71,
+        "corporate_tax": 21.0,
+        "interest_rate": 2.9
+    },
+    "puerto_rico": {
+        "currency_ticker": "usd",
+        "inflation_rate": 1.9,
+        "te": 0,
+        "corporate_tax": 37.5
+    },
+    "qatar": {
+        "currency_ticker": "qar",
+        "inflation_rate": 0.24,
+        "deposit_rate": 4.6,
+        "te": 88,
+        "corporate_tax": 10.0,
+        "interest_rate": 5.1
+    },
+    "democratic_republic_of_the_congo": {
+        "currency_ticker": "cdf"
+    },
+    "romania": {
+        "currency_ticker": "ron",
+        "interbank_rate": 5.63,
+        "inflation_rate": 5.0,
+        "deposit_rate": 5.5,
+        "interest_yield": 7.48,
+        "te": 55,
+        "corporate_tax": 16.0,
+        "interest_rate": 6.5
+    },
+    "russia": {
+        "currency_ticker": "rub",
+        "interbank_rate": 19.67,
+        "inflation_rate": 9.9,
+        "deposit_rate": 21.57,
+        "interest_yield": 15.67,
+        "te": 14,
+        "corporate_tax": 25.0,
+        "interest_rate": 21.0
+    },
+    "rwanda": {
+        "currency_ticker": "rwf",
+        "interbank_rate": 6.79,
+        "inflation_rate": 5.7,
+        "deposit_rate": 9.65,
+        "te": 33,
+        "corporate_tax": 28.0,
+        "interest_rate": 6.5
+    },
+    "samoa": {
+        "currency_ticker": "wst",
+        "deposit_rate": 1.79,
+        "corporate_tax": 27.0
+    },
+    "saudi_arabia": {
+        "currency_ticker": "sar",
+        "interbank_rate": 5.52,
+        "inflation_rate": 2.0,
+        "deposit_rate": 5.15,
+        "te": 80,
+        "corporate_tax": 20.0,
+        "interest_rate": 5.0
+    },
+    "senegal": {
+        "currency_ticker": "xof",
+        "inflation_rate": 1.8,
+        "te": 35,
+        "corporate_tax": 30.0,
+        "interest_rate": 5.5
+    },
+    "serbia": {
+        "currency_ticker": "rsd",
+        "inflation_rate": 4.6,
+        "deposit_rate": 4.5,
+        "te": 48,
+        "corporate_tax": 15.0,
+        "interest_rate": 5.75
+    },
+    "seychelles": {
+        "currency_ticker": "scr",
+        "inflation_rate": 0.97,
+        "deposit_rate": 1.9,
+        "te": 40,
+        "corporate_tax": 33.0,
+        "interest_rate": 1.75
+    },
+    "sierra_leone": {
+        "currency_ticker": "sll",
+        "interbank_rate": 26.19,
+        "inflation_rate": 13.78,
+        "deposit_rate": 18.25,
+        "corporate_tax": 25.0,
+        "interest_rate": 24.75
+    },
+    "singapore": {
+        "currency_ticker": "sgd",
+        "interbank_rate": 3.3,
+        "inflation_rate": 1.2,
+        "interest_yield": 2.872,
+        "te": 98,
+        "corporate_tax": 17.0,
+        "interest_rate": 2.35
+    },
+    "slovakia": {
+        "currency_ticker": "eur",
+        "inflation_rate": 3.9,
+        "interest_yield": 3.37,
+        "te": 75,
+        "corporate_tax": 24.0,
+        "interest_rate": 2.9
+    },
+    "slovenia": {
+        "currency_ticker": "eur",
+        "interbank_rate": 2.7,
+        "inflation_rate": 2.0,
+        "interest_yield": 2.991,
+        "te": 76,
+        "corporate_tax": 22.0,
+        "interest_rate": 2.9
+    },
+    "solomon_islands": {
+        "currency_ticker": "sbd",
+        "inflation_rate": 4.3,
+        "deposit_rate": 0.41,
+        "te": 25,
+        "corporate_tax": 30.0
+    },
+    "south_africa": {
+        "currency_ticker": "zar",
+        "interbank_rate": 7.56,
+        "inflation_rate": 3.0,
+        "deposit_rate": 8.07,
+        "interest_yield": 10.816,
+        "te": 41,
+        "corporate_tax": 27.0,
+        "interest_rate": 7.5
+    },
+    "south_korea": {
+        "currency_ticker": "krw",
+        "interbank_rate": 2.96,
+        "inflation_rate": 2.2,
+        "deposit_rate": 3.19,
+        "interest_yield": 2.816,
+        "te": 86,
+        "corporate_tax": 24.0,
+        "interest_rate": 3.0
+    },
+    "spain": {
+        "currency_ticker": "eur",
+        "inflation_rate": 2.9,
+        "interest_yield": 3.16,
+        "te": 71,
+        "corporate_tax": 25.0,
+        "interest_rate": 2.9
+    },
+    "sri_lanka": {
+        "currency_ticker": "lkr",
+        "inflation_rate": -4.0,
+        "deposit_rate": 7.5,
+        "te": 11,
+        "corporate_tax": 30.0,
+        "interest_rate": 8.0
+    },
+    "st_kitts_and_nevis": {
+        "currency_ticker": "xcd",
+        "deposit_rate": 2.0
+    },
+    "st_lucia": {
+        "currency_ticker": "xcd",
+        "deposit_rate": 1.23
+    },
+    "st_vincent_and_the_grenadines": {
+        "currency_ticker": "xcd",
+        "deposit_rate": 1.24,
+        "te": 25
+    },
+    "sudan": {
+        "currency_ticker": "sdg",
+        "corporate_tax": 35.0
+    },
+    "suriname": {
+        "currency_ticker": "srd",
+        "interbank_rate": 45.0,
+        "inflation_rate": 10.1,
+        "deposit_rate": 7.5,
+        "te": 16,
+        "corporate_tax": 36.0,
+        "interest_rate": 10.0
+    },
+    "swaziland": {
+        "currency_ticker": "szl",
+        "inflation_rate": 3.9,
+        "te": 25,
+        "corporate_tax": 27.5,
+        "interest_rate": 7.0
+    },
+    "sweden": {
+        "currency_ticker": "sek",
+        "interbank_rate": 2.31,
+        "inflation_rate": 0.9,
+        "deposit_rate": 2.15,
+        "interest_yield": 2.282,
+        "te": 99,
+        "corporate_tax": 20.6,
+        "interest_rate": 2.25
+    },
+    "switzerland": {
+        "currency_ticker": "chf",
+        "inflation_rate": 0.4,
+        "deposit_rate": 0.21,
+        "interest_yield": 0.536,
+        "te": 100,
+        "corporate_tax": 14.6,
+        "interest_rate": 0.5
+    },
+    "syria": {
+        "currency_ticker": "syp",
+        "inflation_rate": 120.0,
+        "corporate_tax": 28.0
+    },
+    "taiwan": {
+        "currency_ticker": "twd",
+        "interbank_rate": 1.68,
+        "inflation_rate": 2.66,
+        "interest_yield": 1.595,
+        "te": 90,
+        "corporate_tax": 20.0,
+        "interest_rate": 2.0
+    },
+    "united_republic_of_tanzania": {
+        "currency_ticker": "tzs"
+    },
+    "thailand": {
+        "currency_ticker": "thb",
+        "interbank_rate": 2.4,
+        "inflation_rate": 1.32,
+        "deposit_rate": 1.37,
+        "interest_yield": 2.268,
+        "te": 65,
+        "corporate_tax": 20.0,
+        "interest_rate": 2.25
+    },
+    "tonga": {
+        "currency_ticker": "top",
+        "deposit_rate": 1.53,
+        "corporate_tax": 25.0
+    },
+    "trinidad_and_tobago": {
+        "currency_ticker": "ttd",
+        "inflation_rate": 0.5,
+        "deposit_rate": 1.5,
+        "te": 50,
+        "corporate_tax": 30.0,
+        "interest_rate": 3.5
+    },
+    "tunisia": {
+        "currency_ticker": "tnd",
+        "inflation_rate": 6.0,
+        "te": 21,
+        "corporate_tax": 15.0,
+        "interest_rate": 8.0
+    },
+    "turkey": {
+        "currency_ticker": "try",
+        "inflation_rate": 42.12,
+        "deposit_rate": 43.5,
+        "interest_yield": 26.18,
+        "te": 36,
+        "corporate_tax": 25.0,
+        "interest_rate": 45.0
+    },
+    "uganda": {
+        "currency_ticker": "ugx",
+        "inflation_rate": 3.6,
+        "deposit_rate": 12.41,
+        "te": 28,
+        "corporate_tax": 30.0,
+        "interest_rate": 9.75
+    },
+    "ukraine": {
+        "currency_ticker": "uah",
+        "inflation_rate": 12.9,
+        "deposit_rate": 8.55,
+        "te": 11,
+        "corporate_tax": 18.0,
+        "interest_rate": 14.5
+    },
+    "united_arab_emirates": {
+        "currency_ticker": "aed",
+        "interbank_rate": 4.22,
+        "inflation_rate": 2.89,
+        "te": 90,
+        "corporate_tax": 9.0,
+        "interest_rate": 4.4
+    },
+    "united_kingdom": {
+        "currency_ticker": "gbp",
+        "inflation_rate": 3.0,
+        "deposit_rate": 4.25,
+        "interest_yield": 4.577,
+        "te": 87,
+        "corporate_tax": 25.0,
+        "interest_rate": 4.5
+    },
+    "united_states_of_america": {
+        "currency_ticker": "usd",
+        "inflation_rate":3.0,
+        "deposit_rate": 4.25,
+        "interest_yield": 4.26,
+        "te": 97,
+        "corporate_tax": 21.0,
+        "interest_rate": 4.5
+    },
+    "uruguay": {
+        "currency_ticker": "uyu",
+        "inflation_rate": 5.05,
+        "deposit_rate": 8.1,
+        "te": 61,
+        "corporate_tax": 25.0,
+        "interest_rate": 9.0
+    },
+    "uzbekistan": {
+        "currency_ticker": "uzs",
+        "inflation_rate": 9.8,
+        "deposit_rate": 18.1,
+        "te": 40,
+        "corporate_tax": 15.0,
+        "interest_rate": 13.5
+    },
+    "vanuatu": {
+        "currency_ticker": "vuv",
+        "inflation_rate": 5.3,
+        "deposit_rate": 0.4,
+        "corporate_tax": 0.0
+    },
+    "venezuela": {
+        "currency_ticker": "ves",
+        "interbank_rate": 59.12,
+        "inflation_rate": 23.58,
+        "deposit_rate": 36.0,
+        "te": 11,
+        "corporate_tax": 34.0,
+        "interest_rate": 59.12
+    },
+    "vietnam": {
+        "currency_ticker": "vnd",
+        "interbank_rate": 5.3,
+        "inflation_rate": 3.63,
+        "deposit_rate": 5.08,
+        "interest_yield": 3.181,
+        "te": 46,
+        "corporate_tax": 20.0,
+        "interest_rate": 4.5
+    },
+    "zambia": {
+        "currency_ticker": "zmw",
+        "inflation_rate": 16.7,
+        "deposit_rate": 5.88,
+        "interest_yield": 21.894,
+        "te": 30,
+        "corporate_tax": 30.0,
+        "interest_rate": 14.5
+    },
+    "zimbabwe": {
+        "currency_ticker": "zwg",
+        "inflation_rate": 57.5,
+        "deposit_rate": 8.15,
+        "corporate_tax": 24.72,
+        "interest_rate": 35.0
+    },
+    "burundi": {
+        "inflation_rate": 38.2,
+        "interest_rate": 12.0
+    },
+    "central_african_republic": {
+        "inflation_rate": 1.2,
+        "interest_rate": 5.0
+    },
+    "congo": {
+        "inflation_rate": 15.55,
+        "te": 22,
+        "corporate_tax": 30.0,
+        "interest_rate": 25.0
+    },
+    "cuba": {
+        "inflation_rate": 24.88,
+        "te": 5,
+        "interest_rate": 2.25
+    },
+    "djibouti": {
+        "inflation_rate": -0.6
+    },
+    "eritrea": {
+        "inflation_rate": 6.4
+    },
+    "faroe_islands": {
+        "inflation_rate": 0.8
+    },
+    "iran": {
+        "inflation_rate": 31.8,
+        "interest_rate": 23.0
+    },
+    "liberia": {
+        "inflation_rate": 7.2,
+        "interest_rate": 17.0
+    },
+    "mali": {
+        "inflation_rate": 4.9,
+        "te": 15,
+        "interest_rate": 5.5
+    },
+    "new_caledonia": {
+        "inflation_rate": 1.6,
+        "interest_rate": 3.5
+    },
+    "niger": {
+        "inflation_rate": 4.2,
+        "te": 15,
+        "interest_rate": 5.5
+    },
+    "palestine": {
+        "inflation_rate": 22.77
+    },
+    "sao_tome_and_principe": {
+        "inflation_rate": 11.6,
+        "interest_rate": 10.0
+    },
+    "somalia": {
+        "inflation_rate": 5.57
+    },
+    "south_sudan": {
+        "inflation_rate": 113.0,
+        "interest_rate": 12.0
+    },
+    "tajikistan": {
+        "inflation_rate": 3.6,
+        "te": 27,
+        "interest_rate": 8.75
+    },
+    "tanzania": {
+        "inflation_rate": 3.1,
+        "te": 32,
+        "corporate_tax": 30.0,
+        "interest_rate": 6.0
+    },
+    "togo": {
+        "inflation_rate": 2.2,
+        "te": 27,
+        "interest_rate": 5.5
+    },
+    "turkmenistan": {
+        "inflation_rate": 5.9,
+        "te": 35
+    },
+    "united_states": {
+        "inflation_rate": 3.0,
+        "interest_yield": 4.444,
+        "te": 97,
+        "corporate_tax": 21.0,
+        "interest_rate": 4.5
+    },
+    "eurozone": {
+        "interest_yield": 3.06
+    },
+    "montserrat": {
+        "te": 55
+    },
+    "san_marino": {
+        "te": 50
+    }
+}

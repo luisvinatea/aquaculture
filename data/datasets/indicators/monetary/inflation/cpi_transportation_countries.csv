@@ -1,0 +1,15 @@
+country,last,previous,rate_of_change,unit,date
+ecuador,122.0,122.0,0.0,points,2025-01-01
+usa,270.0,268.0,2.0,points,2025-01-01
+eurozone,127.0,126.0,1.0,points,2024-12-01
+canada,173.0,173.0,0.0,points,2025-01-01
+uk,133.0,134.0,1.0,points,2025-01-01
+australia,129.0,130.0,1.0,points,2024-12-01
+newzealand,1254.0,1236.0,18.0,points,2024-12-01
+hongkong,112.0,110.0,2.0,points,2025-01-01
+japan,99.1,98.1,1.0,points,2025-01-01
+peru,115.0,116.0,1.0,points,2025-01-01
+southkorea,116.0,114.0,2.0,points,2025-01-01
+switzerland,110.0,110.0,0.0,points,2025-01-01
+brazil,6807.0,6731.0,76.0,points,2025-01-01
+singapore,136.0,136.0,0.0,points,2024-12-01

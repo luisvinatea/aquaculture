@@ -1,0 +1,4 @@
+country,last,previous,rate_of_change,unit,date
+usa,0.3,0.2,0.0999999999999999,percent,2025-01-01
+australia,0.2,-1.4,1.6,percent,2024-12-01
+newzealand,-1.7,3.1,4.8,percent,2024-09-01

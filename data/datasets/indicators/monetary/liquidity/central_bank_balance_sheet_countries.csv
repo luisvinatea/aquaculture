@@ -1,0 +1,11 @@
+country,last,previous,rate_of_change,unit,date
+australia,422435.0,417570.0,4865.0,aud_million,2025-02-01
+usa,6782332.0,6813513.0,31181.0,usd_million,2025-02-01
+japan,744346.0,747992.0,3646.0,jpy_billion,2025-01-01
+uk,848461.0,846505.0,1956.0,gbp_million,2025-02-01
+eurozone,6368862.0,6371003.0,2141.0,eur_million,2025-02-01
+switzerland,854078.0,843049.0,11029.0,chf_million,2024-12-01
+southkorea,550166.0,539459.0,10707.0,krw_billion,2024-11-01
+canada,279804.0,277243.0,2561.0,cad_million,2025-01-01
+singapore,807340.0,803031.0,4309.0,sgd_million,2025-01-01
+newzealand,95005.0,89332.0,5673.0,nzd_million,2025-01-01

@@ -1,0 +1,15 @@
+country,last,previous,rate_of_change,unit,date
+ecuador,0.26,0.53,0.27,percent,2025-01-01
+usa,3.0,2.9,0.1,percent,2025-01-01
+eurozone,2.5,2.4,0.1,percent,2025-01-01
+canada,1.9,1.8,0.0999999999999998,percent,2025-01-01
+uk,3.0,2.5,0.5,percent,2025-01-01
+australia,2.4,2.8,0.3999999999999999,percent,2024-12-01
+newzealand,2.2,2.2,0.0,percent,2024-12-01
+hongkong,2.0,1.4,0.6000000000000001,percent,2025-01-01
+japan,4.0,3.6,0.3999999999999999,percent,2025-01-01
+peru,1.85,1.97,0.1199999999999998,percent,2025-01-01
+southkorea,2.2,1.9,0.3000000000000002,percent,2025-01-01
+switzerland,0.4,0.6,0.1999999999999999,percent,2025-01-01
+brazil,4.56,4.83,0.2700000000000004,percent,2025-01-01
+singapore,1.6,1.6,0.0,percent,2024-12-01

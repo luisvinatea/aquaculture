@@ -1,0 +1,5 @@
+country,last,previous,rate_of_change,unit,date
+usa,0.4,0.2,0.2,percent,2025-01-01
+eurozone,-1.0,0.5,1.5,percent,2025-01-01
+canada,0.4,-0.3,0.7,percent,2025-01-01
+uk,-0.4,0.3,0.7,percent,2025-01-01

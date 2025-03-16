@@ -1,0 +1,4 @@
+country,last,previous,rate_of_change,unit,date
+usa,1.0,-0.5,1.5,percent,2025-01-01
+eurozone,1.8,0.1,1.7,percent,2025-01-01
+uk,-6.6,-6.0,0.5999999999999996,percent,2025-01-01

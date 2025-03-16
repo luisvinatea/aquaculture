@@ -1,0 +1,12 @@
+country,last,previous,rate_of_change,unit,date
+usa,152.0,150.0,2.0,points,2025-01-01
+canada,139.0,137.0,2.0,points,2024-12-01
+australia,158.0,153.0,5.0,points,2024-12-01
+newzealand,1443.0,1433.0,10.0,points,2024-09-01
+hongkong,108.0,109.0,1.0,points,2024-12-01
+japan,141.0,140.0,1.0,points,2025-01-01
+peru,175.0,173.0,2.0,points,2024-12-01
+southkorea,135.0,134.0,1.0,points,2025-01-01
+switzerland,100.0,99.8,0.2000000000000028,points,2025-01-01
+brazil,155.0,160.0,5.0,points,2025-01-01
+singapore,94.33,93.77,0.5600000000000023,points,2024-12-01

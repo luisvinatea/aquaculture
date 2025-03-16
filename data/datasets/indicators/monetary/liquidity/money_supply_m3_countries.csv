@@ -1,0 +1,12 @@
+country,last,previous,rate_of_change,unit,date
+australia,3125.0,3111.0,14.0,aud_billion,2024-12-01
+japan,1610377.0,1609828.0,549.0,jpy_billion,2025-01-01
+uk,3584196.0,3580841.0,3355.0,gbp_million,2024-12-01
+eurozone,16726432.0,16683688.0,42744.0,eur_million,2024-12-01
+switzerland,1157924.0,1155649.0,2275.0,chf_million,2024-12-01
+southkorea,5649083.0,5634840.0,14243.0,krw_billion,2024-12-01
+canada,3800470.0,3777254.0,23216.0,cad_million,2024-12-01
+brazil,12191199.0,12016435.0,174764.0,brl_million,2024-12-01
+singapore,843543.0,838330.0,5213.0,sgd_million,2024-12-01
+hongkong,18501577.0,18345689.0,155888.0,hkd_million,2024-12-01
+newzealand,430065.0,424404.0,5661.0,nzd_million,2024-12-01

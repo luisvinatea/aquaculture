@@ -1,0 +1,11 @@
+country,last,previous,rate_of_change,unit,date
+ecuador,43035.0,43067.0,32.0,usd_million,2024-12-01
+usa,40.85,-7.49,48.34,usd_billion,2024-12-01
+eurozone,778197.0,774917.0,3280.0,eur_million,2024-12-01
+southkorea,1927260.0,1913814.0,13446.0,krw_billion,2024-12-01
+brazil,3948000.0,3915900.0,32100.0,brl_million,2024-12-01
+canada,784114.0,779514.0,4600.0,cad_million,2024-12-01
+peru,101883.0,101662.0,221.0,pen_million,2024-12-01
+australia,2341.0,2328.0,13.0,aud_billion,2024-12-01
+japan,53923.0,54793.0,870.0,jpy_billion,2024-09-01
+uk,1045.0,905.0,140.0,gbp_million,2024-12-01

@@ -1,7 +1,5 @@
 # Ignore dataset files
-*.csv
 *.tsv
-*.json
 *.xml
 *.xlsx
 *.xls
@@ -14,13 +12,6 @@
 *.gz
 *.tar
 *.rar
-
-# Ignore raw data and outputs directories
-data/
-datasets/
-outputs/
-logs/
-results/
 
 # Ignore temporary or system-specific files
 *.tmp

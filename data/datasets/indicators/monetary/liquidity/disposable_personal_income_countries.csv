@@ -1,0 +1,8 @@
+country,last,previous,rate_of_change,unit,date
+usa,22056.0,21977.0,79.0,usd_billion,2024-12-01
+eurozone,2353823.0,2337783.0,16040.0,eur_million,2024-09-01
+southkorea,2438286.0,2349204.0,89082.0,krw_billion,2023-12-01
+canada,1729048.0,1690764.0,38284.0,cad_million,2024-09-01
+australia,407052.0,401116.0,5936.0,aud_million,2024-09-01
+japan,975.0,422.0,553.0,jpy_thousand,2024-12-01
+uk,414121.0,413269.0,852.0,gbp_million,2024-09-01

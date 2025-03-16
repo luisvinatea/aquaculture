@@ -1,0 +1,9 @@
+country,last,previous,rate_of_change,unit,date
+ecuador,47116.0,46692.0,424.0,usd_million,2024-12-01
+usa,12652.0,12594.0,58.0,usd_billion,2025-01-01
+eurozone,13500486.0,13419387.0,81099.0,eur_million,2024-12-01
+brazil,6427400.0,6339900.0,87500.0,brl_million,2024-12-01
+peru,461274.0,460805.0,469.0,pen_million,2024-12-01
+australia,0.6,0.6,0.0,percent,2024-12-01
+newzealand,582711.0,578725.0,3986.0,nzd_million,2024-12-01
+singapore,660894.0,659209.0,1685.0,sgd_million,2024-12-01

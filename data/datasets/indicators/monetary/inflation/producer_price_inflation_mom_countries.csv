@@ -1,0 +1,11 @@
+country,last,previous,rate_of_change,unit,date
+usa,0.4,0.5,0.0999999999999999,percent,2025-01-01
+eurozone,0.4,1.7,1.2999999999999998,percent,2024-12-01
+canada,1.6,0.4,1.2000000000000002,percent,2025-01-01
+uk,0.5,-0.2,0.7,percent,2025-01-01
+australia,0.8,1.0,0.1999999999999999,percent,2024-12-01
+newzealand,-0.1,1.5,1.6,percent,2024-12-01
+japan,0.3,0.4,0.1,percent,2025-01-01
+southkorea,0.6,0.4,0.1999999999999999,percent,2025-01-01
+switzerland,0.1,0.0,0.1,percent,2025-01-01
+brazil,1.48,1.25,0.2299999999999999,percent,2024-12-01

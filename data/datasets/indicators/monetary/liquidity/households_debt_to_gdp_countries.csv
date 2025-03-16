@@ -1,0 +1,13 @@
+country,last,previous,rate_of_change,unit,date
+usa,70.7,71.1,0.3999999999999915,percent_of_gdp,2024-06-01
+eurozone,52.2,52.4,0.1999999999999957,percent_of_gdp,2024-06-01
+southkorea,91.0,92.0,1.0,percent_of_gdp,2024-06-01
+brazil,35.7,35.3,0.4000000000000057,percent_of_gdp,2024-06-01
+canada,102.0,102.0,0.0,percent_of_gdp,2024-06-01
+hongkong,90.1,91.6,1.5,percent_of_gdp,2024-06-01
+switzerland,126.0,126.0,0.0,percent_of_gdp,2024-06-01
+australia,112.0,111.0,1.0,percent_of_gdp,2024-06-01
+japan,65.4,65.3,0.1000000000000085,percent_of_gdp,2024-06-01
+newzealand,91.0,91.0,0.0,percent_of_gdp,2024-06-01
+singapore,44.9,45.5,0.6000000000000014,percent_of_gdp,2024-06-01
+uk,77.5,77.6,0.0999999999999943,percent_of_gdp,2024-06-01

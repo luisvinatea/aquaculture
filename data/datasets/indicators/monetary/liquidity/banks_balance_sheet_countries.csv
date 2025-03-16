@@ -1,0 +1,8 @@
+country,last,previous,rate_of_change,unit,date
+usa,23852.0,23803.0,49.0,usd_billion,2025-02-01
+uk,4479437.0,4586154.0,106717.0,gbp_million,2024-12-01
+switzerland,2349406.0,2335155.0,14251.0,chf_million,2024-11-01
+canada,3334180.0,3481032.0,146852.0,cad_million,2024-12-01
+singapore,3742373.0,3554703.0,187670.0,sgd_million,2024-12-01
+hongkong,28320139.0,28060410.0,259729.0,hkd_million,2024-12-01
+newzealand,743973.0,728167.0,15806.0,nzd_million,2024-12-01
