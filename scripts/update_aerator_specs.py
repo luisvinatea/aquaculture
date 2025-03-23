@@ -165,7 +165,6 @@ def push_to_google_sheet():
     save_last_sync_timestamp()
 
 def sync():
-    """Perform a bidirectional sync with conflict detection."""
     has_local_changes = check_git_status(CSV_FILE)
     service = get_sheets_service()
     last_row, last_column = get_sheet_dimensions(service, SPREADSHEET_ID, SHEET_NAME)
@@ -177,8 +176,12 @@ def sync():
         if has_local_changes:
             print("Local CSV has uncommitted changes. Please commit or stash them before syncing.")
             return
-        print("Pulling changes from Google Sheet...")
-        pull_from_google_sheet()
+        if not sheet_data and csv_data:
+            print("Google Sheet is empty. Pushing local CSV data instead of pulling...")
+            push_to_google_sheet()
+        else:
+            print("Pulling changes from Google Sheet...")
+            pull_from_google_sheet()
     else:
         if has_local_changes:
             print("Pushing local changes to Google Sheet...")
