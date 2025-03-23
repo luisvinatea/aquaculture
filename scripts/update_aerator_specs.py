@@ -45,9 +45,14 @@ def get_sheet_dimensions(service, spreadsheet_id, sheet_name):
     return actual_last_row, actual_last_column
 
 def read_csv_to_list(csv_file):
-    """Read the CSV file and return the data as a list of lists."""
     df = pd.read_csv(csv_file)
-    return [df.columns.tolist()] + df.values.tolist()
+    data = [df.columns.tolist()] + df.values.tolist()
+    # Replace NaN with empty string in the resulting list
+    for row in data:
+        for i, value in enumerate(row):
+            if pd.isna(value):  # Checks for NaN or None
+                row[i] = ""
+    return data
 
 def write_list_to_csv(data, csv_file):
     """Write a list of lists to the CSV file."""
@@ -67,34 +72,35 @@ def read_google_sheet(service, spreadsheet_id, sheet_name, last_row, last_column
     values = result.get("values", [])
     return values
 
-def update_google_sheet(service, spreadsheet_id, sheet_name, data):
-    """Update the specified range in the Google Sheet with the provided data."""
-    if not data:
-        print("No data to update.")
-        return
-
-    # Determine the range to update based on the data dimensions
-    last_row = len(data)
-    last_column = len(data[0]) if data else 1
-    col_letter = chr(64 + last_column) if last_column <= 26 else "ZZ"
-    range_name = f"{sheet_name}!A1:{col_letter}{last_row}"
-
-    # Clear the existing data
-    service.spreadsheets().values().clear(
-        spreadsheetId=spreadsheet_id,
-        range=range_name,
-        body={}
-    ).execute()
-
-    # Update the sheet with the new data
-    body = {"values": data}
+def update_google_sheet(service, spreadsheet_id, sheet_name, new_data):
+    last_row, last_column = get_sheet_dimensions(service, spreadsheet_id, sheet_name)
+    existing_data = read_google_sheet(service, spreadsheet_id, sheet_name, last_row, last_column)
+    
+    if not existing_data:
+        merged_data = new_data
+    else:
+        # Assume first column (A) is a unique key (e.g., brand)
+        existing_dict = {row[0]: row for row in existing_data[1:]}  # Skip header
+        new_dict = {row[0]: row for row in new_data[1:]}
+        # Merge, prioritizing new_data for existing keys
+        merged_dict = {**existing_dict, **new_dict}
+        # Rebuild data with headers
+        merged_data = [new_data[0]] + list(merged_dict.values())
+        # Ensure all rows match the widest column count
+        max_cols = max(len(new_data[0]), len(existing_data[0]))
+        for row in merged_data:
+            while len(row) < max_cols:
+                row.append("")
+    
+    col_letter = chr(64 + len(merged_data[0])) if merged_data else "ZZ"
+    range_name = f"{sheet_name}!A1:{col_letter}{len(merged_data)}"
     service.spreadsheets().values().update(
         spreadsheetId=spreadsheet_id,
         range=range_name,
         valueInputOption="RAW",
-        body=body
+        body={"values": merged_data}
     ).execute()
-    print(f"Updated {range_name} with {len(data)} rows.")
+    print(f"Updated {range_name} with {len(merged_data)} rows.")
 
 def get_last_sync_timestamp():
     """Read the last sync timestamp from the file."""
