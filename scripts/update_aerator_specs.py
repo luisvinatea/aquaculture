@@ -7,7 +7,7 @@ import time
 from datetime import datetime
 
 # Configuration
-CREDENTIALS_FILE = "/home/luisvinatea/Dev/Repos/Aquaculture/.credentials/aquaculture-data-sync-123456.json"
+CREDENTIALS_FILE = "/home/luisvinatea/Dev/Repos/Aquaculture/.credentials/aquacyclone-0b87afb205f8.json"
 SPREADSHEET_ID = "1ou6ZOpV1UrIHpPU9ith1_1YLpvXG3NbYMSqYIpfCkKw"
 CSV_FILE = "/home/luisvinatea/Dev/Repos/Aquaculture/data/raw/Pesos_WangFa_Beraqua_3HP_2025-03-22.csv"
 SHEET_NAME = "Pesos"
