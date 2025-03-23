@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 # Define file paths based on user's provided paths
-base_dir = "/home/luisvinatea/Dev/Repos/aquaculture/data/datasets/indicators/forex/"
+base_dir = "/home/luisvinatea/Dev/Repos/Aquaculture/data/datasets/indicators/forex/"
 spot_exchange_rates_file = os.path.join(base_dir, "all_spot_exchange_rates.csv")
 currency_tickers_file = os.path.join(base_dir, "currency_tickers.csv")
 inflation_rates_file = os.path.join(base_dir, "inflation_rates.csv")

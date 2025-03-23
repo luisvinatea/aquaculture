@@ -47,5 +47,6 @@ venv/
 
 # Ignore specific tools and IDEs
 .vscode/
+.credentials/
 .idea/
 *.iml

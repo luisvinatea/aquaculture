@@ -19,7 +19,7 @@ SPOT_CURRENCIES = list(set([
 ]))
 
 # Portable file paths
-data_dir = "/home/luisvinatea/Dev/Repos/aquaculture/data/datasets/indicators/forex"
+data_dir = "/home/luisvinatea/Dev/Repos/Aquaculture/data/datasets/indicators/forex"
 SPOT_CSV_PATH = os.path.join(data_dir, "exchange_rate_spot.csv")
 FUTURES_CSV_PATH = os.path.join(data_dir, "exchange_rate_futures.csv")
 ALL_SPOT_CSV_PATH = os.path.join(data_dir, "all_spot_exchange_rates.csv")

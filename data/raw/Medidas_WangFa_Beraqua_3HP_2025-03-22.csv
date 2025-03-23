@@ -1,0 +1,3 @@
+marca,potencia(hp),frecuencia(hz),voltaje(v),n_flotadores(un),h_flotadores(cm),w_flotadores(cm),l_flotadores(cm),l_aparato(cm),n_paletas(un),l_entre_paletas(cm),d_paleta(cm),n_hojas(un),lat_entre_hojas,long_entre_hojas,l_hoja,w_hoja,n_huecos_hoja,l_chasis,w_chasis,p_chasis
+WangFa,3,60,440,4,20,33,175,337,8,29,64,8,25,6,14.5,20,16,250,75,880
+Beraqua,3,60,440,5,23,32.4,173,363,6,29,52,10,38.8,9,26,8,10,300,107,600
