@@ -1,0 +1,12 @@
+Model: Aquastorm Paddlewheel 3HP
+Temperature: 26.0 °C
+Salinity: 20.0 ‰
+Horse Power: 3 HP
+t₁₀: 1 min 50 sec (1.83 minutes)
+t₇₀: 11 min 0 sec (11.0 minutes)
+kWh Price: $0.05
+
+Key Exported Metrics:
+SOTR (kg O₂/h): 3.15
+SAE (kg O₂/kWh): 1.41
+US$/kg O₂: 0.04

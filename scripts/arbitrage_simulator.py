@@ -23,9 +23,9 @@ class CreditEvaluation:
         return (npv + self.initial_investment) / abs(self.initial_investment)
 
 # Data directories
-data_directory = "/home/luisvinatea/Dev/Repos/Aquaculture/data/datasets/indicators/forex"
-ecuador_directory = "/home/luisvinatea/Dev/Repos/Aquaculture/data/datasets/shrimp_industry/ecuador"
-simulator_directory = "/home/luisvinatea/Dev/Repos/Aquaculture/data/datasets/simulator"
+data_directory = "/home/luisvinatea/Dev/Repos/Aquaculture/data/datasets/indicators/financial/forex"
+ecuador_directory = "/home/luisvinatea/Dev/Repos/Aquaculture/data/datasets/financial/shrimp_industry/ecuador"
+simulator_directory = "/home/luisvinatea/Dev/Repos/Aquaculture/data/datasets/financial/arbitrage_simulator"
 
 class Simulator:
     def __init__(self, data_directory, ecuador_directory):

@@ -10,7 +10,7 @@ class CSVWatcher(FileSystemEventHandler):
             push()
 
 def watch_csv():
-    path = "/home/luisvinatea/Dev/Repos/Aquaculture/data/raw"
+    path = "/home/luisvinatea/Dev/Repos/Aquaculture/data/raw/csv"
     event_handler = CSVWatcher()
     observer = Observer()
     observer.schedule(event_handler, path, recursive=False)

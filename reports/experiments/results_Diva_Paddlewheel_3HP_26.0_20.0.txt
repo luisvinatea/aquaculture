@@ -1,0 +1,12 @@
+Model: Diva Paddlewheel 3HP
+Temperature: 26.0 °C
+Salinity: 20.0 ‰
+Horse Power: 3 HP
+t₁₀: 2 min 0 sec (2.0 minutes)
+t₇₀: 12 min 0 sec (12.0 minutes)
+kWh Price: $0.05
+
+Key Exported Metrics:
+SOTR (kg O₂/h): 2.89
+SAE (kg O₂/kWh): 1.29
+US$/kg O₂: 0.04

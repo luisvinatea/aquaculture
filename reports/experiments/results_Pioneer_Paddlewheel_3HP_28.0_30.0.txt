@@ -1,0 +1,12 @@
+Model: Pioneer Paddlewheel 3HP
+Temperature: 28.0 °C
+Salinity: 30.0 ‰
+Horse Power: 3 HP
+t₁₀: 1 min 0 sec (1.0 minutes)
+t₇₀: 8 min 0 sec (8.0 minutes)
+kWh Price: $0.1
+
+Key Exported Metrics:
+SOTR (kg O₂/h): 3.6
+SAE (kg O₂/kWh): 1.61
+US$/kg O₂: 0.06

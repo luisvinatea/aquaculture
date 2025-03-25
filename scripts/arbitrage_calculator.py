@@ -87,7 +87,7 @@ class ArbitrageAnalyzer:
 
 def test_arbitrage_analyzer():
     """Test function for standalone execution."""
-    data_directory = "/home/luisvinatea/Dev/Repos/Aquaculture/data/datasets/indicators/forex"
+    data_directory = "/home/luisvinatea/Dev/Repos/Aquaculture/data/datasets/financial/indicators/forex"
     forward_proxy_path = os.path.join(data_directory, "forward_proxy.csv")
     inflation_proxy_path = os.path.join(data_directory, "inflation_proxy.csv")
     analyzer = ArbitrageAnalyzer(data_directory, forward_proxy_path, inflation_proxy_path)
