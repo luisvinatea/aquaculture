@@ -1,0 +1,15 @@
+Model: WangFa Paddlewheel ("3HP") 
+Temperature: 28 °C
+Salinity: 30 ‰
+Horse Power: 3 HP
+Selected Pond Volume: 40 m³
+Ideal Pond Volume: 70 m³
+t₁₀: 1 min
+t₇₀: 8 min
+kWh Price: $0.05
+
+Metrics Comparison (Calculated vs Ideal):
+SOTR (kg O₂/h): 2.06 vs 3.6 (Log % Variation: -0.4)
+SAE (kg O₂/kWh): 0.92 vs 1.61 (Log % Variation: -0.23)
+US$/kg O₂: 0.05 vs 0.03 (Log % Variation: 0.01)
+Power (kW): 2.24 vs 2.24 (Log % Variation: 0.0)

@@ -1,0 +1,137 @@
+Integrated Analysis
+
+Aerator Tier: Medium
+Temperature: 28.0 °C
+Salinity: 30.0 ‰
+Average Horse Power: 3.00 HP
+Ideal Horse Power for 40 m³: 2 HP
+Selected Pond Volume: 40 m³
+Ideal Pond Volume for 3.00 HP: 70 m³
+Daily Hours: 8
+Yearly Hours: 2920
+Total Oxygen Demand: 15768.00 kg O₂/year
+kWh Price: $0.05
+
+Aerator-Specific Parameters:
+Floating Paddlewheels:
+  Horse Power: 3.00 HP
+  t₁₀: 1.0000000000000002 min
+  t₇₀: 7.999999999999999 min
+  DO Deficit Factor: 1.00
+  Water Depth Factor: 1.00
+  Placement Factor: 1.00
+  Calculated DO Rate: 5.40 kg O₂/h
+  SAE: 2.41 kg O₂/kWh
+  KlaT: 9.43 h⁻¹
+  Power: 2.24 kW
+
+Floating Vertical Pump:
+  Horse Power: 3.00 HP
+  t₁₀: 1.0000000000000002 min
+  t₇₀: 7.999999999999999 min
+  DO Deficit Factor: 1.00
+  Water Depth Factor: 1.00
+  Placement Factor: 1.00
+  Calculated DO Rate: 4.50 kg O₂/h
+  SAE: 2.01 kg O₂/kWh
+  KlaT: 9.43 h⁻¹
+  Power: 2.24 kW
+
+Floating Pump Sprayer:
+  Horse Power: 3.00 HP
+  t₁₀: 1.0000000000000002 min
+  t₇₀: 7.999999999999999 min
+  DO Deficit Factor: 1.00
+  Water Depth Factor: 1.00
+  Placement Factor: 1.00
+  Calculated DO Rate: 3.90 kg O₂/h
+  SAE: 1.74 kg O₂/kWh
+  KlaT: 9.43 h⁻¹
+  Power: 2.24 kW
+
+Diffuser:
+  Horse Power: 3.00 HP
+  t₁₀: 1.0000000000000002 min
+  t₇₀: 7.999999999999999 min
+  DO Deficit Factor: 1.00
+  Water Depth Factor: 1.00
+  Placement Factor: 1.00
+  Calculated DO Rate: 6.00 kg O₂/h
+  SAE: 2.68 kg O₂/kWh
+  KlaT: 9.43 h⁻¹
+  Power: 2.24 kW
+
+Propeller-Aspirator-Pump:
+  Horse Power: 3.00 HP
+  t₁₀: 1.0000000000000002 min
+  t₇₀: 7.999999999999999 min
+  DO Deficit Factor: 1.00
+  Water Depth Factor: 1.00
+  Placement Factor: 1.00
+  Calculated DO Rate: 5.10 kg O₂/h
+  SAE: 2.28 kg O₂/kWh
+  KlaT: 9.43 h⁻¹
+  Power: 2.24 kW
+
+Tractor Paddlewheel:
+  Horse Power: 3.00 HP
+  t₁₀: 1.0000000000000002 min
+  t₇₀: 7.999999999999999 min
+  DO Deficit Factor: 1.00
+  Water Depth Factor: 1.00
+  Placement Factor: 1.00
+  Calculated DO Rate: 4.80 kg O₂/h
+  SAE: 2.14 kg O₂/kWh
+  KlaT: 9.43 h⁻¹
+  Power: 2.24 kW
+
+Tractor Pump Sprayer:
+  Horse Power: 3.00 HP
+  t₁₀: 1.0000000000000002 min
+  t₇₀: 7.999999999999999 min
+  DO Deficit Factor: 1.00
+  Water Depth Factor: 1.00
+  Placement Factor: 1.00
+  Calculated DO Rate: 4.20 kg O₂/h
+  SAE: 1.88 kg O₂/kWh
+  KlaT: 9.43 h⁻¹
+  Power: 2.24 kW
+
+Metrics Comparison (Average HP vs Ideal HP):
+Pond Volume (m³): 40 vs 40 (Log % Variation: N/A)
+Cs (mg/L): 6.6 vs 6.6 (Log % Variation: 0.0)
+KlaT (h⁻¹): 9.43 vs 9.43 (Log % Variation: 0.0)
+Kla20 (h⁻¹): 7.8 vs 7.8 (Log % Variation: 0.0)
+SOTR (kg O₂/h): 5.4 vs 3.6 (Log % Variation: 0.45)
+SAE (kg O₂/kWh): 2.41 vs 2.41 (Log % Variation: 0.0)
+US$/kg O₂: 0.02 vs 0.02 (Log % Variation: 0.0)
+Power (kW): 2.24 vs 1.49 (Log % Variation: 0.24)
+
+Optimization Results:
+Optimal Total Cost: $513.27
+Depreciation Cost: $204.75
+Aerator Usage:
+  Diffuser: 0.90 units
+
+Breakeven Analysis (Subpowered vs Overpowered):
+Floating Paddlewheels:
+  Subpowered Cost (HP=1.50): $947.00
+  Overpowered Cost (HP=6.00): $3788.00
+Floating Vertical Pump:
+  Subpowered Cost (HP=1.50): $472.05
+  Overpowered Cost (HP=6.00): $1888.20
+Floating Pump Sprayer:
+  Subpowered Cost (HP=1.50): $1873.90
+  Overpowered Cost (HP=6.00): $7495.60
+Diffuser:
+  Subpowered Cost (HP=1.50): $285.15
+  Overpowered Cost (HP=6.00): $1140.60
+Propeller-Aspirator-Pump:
+  Subpowered Cost (HP=1.50): $329.80
+  Overpowered Cost (HP=6.00): $1319.20
+Tractor Paddlewheel:
+  Subpowered Cost (HP=1.50): $17643.75
+  Overpowered Cost (HP=6.00): $70575.00
+Tractor Pump Sprayer:
+  Subpowered Cost (HP=1.50): $17636.25
+  Overpowered Cost (HP=6.00): $70545.00

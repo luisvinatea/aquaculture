@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import logging
 import json
-from hedging_calculator import HedgingCostCalculator  # Import the HedgingCostCalculator
+from scripts.financial.hedging_calculator import HedgingCostCalculator  # Import the HedgingCostCalculator
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

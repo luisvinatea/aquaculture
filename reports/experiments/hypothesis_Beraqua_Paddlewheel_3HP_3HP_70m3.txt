@@ -1,0 +1,20 @@
+Model: Beraqua Paddlewheel 3HP
+Temperature: 28 °C
+Salinity: 30 ‰
+Selected Horse Power: 3 HP
+Ideal Horse Power for 70 m³: 3 HP
+Selected Pond Volume: 70 m³
+Ideal Pond Volume for 3 HP: 70 m³
+t₁₀: 1 min
+t₇₀: 8 min
+kWh Price: $0.05
+
+Metrics Comparison (Selected HP vs Ideal HP):
+Pond Volume (m³): 70 vs 70 (Log % Variation: N/A)
+Cs (kg/m³): 6.6 vs 6.6 (Log % Variation: 0.0)
+KlaT (h⁻¹): 9.43 vs 9.43 (Log % Variation: 0.0)
+Kla20 (h⁻¹): 7.8 vs 7.8 (Log % Variation: 0.0)
+SOTR (kg O₂/h): 3.6 vs 3.6 (Log % Variation: 0.0)
+SAE (kg O₂/kWh): 1.61 vs 1.61 (Log % Variation: 0.0)
+US$/kg O₂: 0.03 vs 0.03 (Log % Variation: 0.0)
+Power (kW): 2.24 vs 2.24 (Log % Variation: 0.0)

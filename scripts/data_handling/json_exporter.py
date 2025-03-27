@@ -1,6 +1,6 @@
 import json
 
-# Define the matrix as a 2D list
+# Define the matrix as a 2D list (values in mg/L)
 o2_saturation_data = [
     [14.6, 14.1, 13.6, 13.2, 12.7, 12.3, 11.9, 11.5, 11.1],
     [14.2, 13.7, 13.2, 12.8, 12.4, 11.9, 11.5, 11.2, 10.8],
@@ -45,12 +45,12 @@ o2_saturation_data = [
     [6.4, 6.2, 6.0, 5.9, 5.7, 5.5, 5.4, 5.2, 5.0]
 ]
 
-# Structure the data with metadata
+# Structure the data with corrected metadata
 data_structure = {
     "metadata": {
         "temperature_range": {"min": 0, "max": 40, "step": 1},
         "salinity_range": {"min": 0, "max": 40, "step": 5},
-        "unit": "kg/m³",
+        "unit": "mg/L",  # Corrected unit
         "description": "Dissolved oxygen needed for 100% saturation in shrimp ponds"
     },
     "data": o2_saturation_data

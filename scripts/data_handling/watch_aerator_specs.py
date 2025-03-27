@@ -1,7 +1,7 @@
 import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
-from update_aerator_specs import push
+from scripts.data_handling.update_aerator_specs import push
 
 class CSVWatcher(FileSystemEventHandler):
     def on_modified(self, event):

@@ -1,6 +1,6 @@
 import pandas as pd
 import os
-from arbitrage_calculator import ArbitrageAnalyzer
+from scripts.financial.arbitrage_calculator import ArbitrageAnalyzer
 
 class CreditEvaluation:
     def __init__(self, aerator_price, aerator_quantity, client_rate, loan_rate, horizon, factoring_discount):

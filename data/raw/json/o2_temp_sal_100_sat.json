@@ -10,7 +10,7 @@
             "max": 40,
             "step": 5
         },
-        "unit": "kg/m\u00b3",
+        "unit": "mg/L",
         "description": "Dissolved oxygen needed for 100% saturation in shrimp ponds"
     },
     "data": [

@@ -1,0 +1,77 @@
+Integrated Analysis
+
+Aerator Tier: Medium
+Temperature: 28.0 °C
+Salinity: 30.0 ‰
+Average Horse Power: 3.00 HP
+Ideal Horse Power for 100 m³: 4 HP
+Selected Pond Volume: 100 m³
+Ideal Pond Volume for 3.00 HP: 70 m³
+Daily Hours: 8
+Yearly Hours: 2920
+Total Oxygen Demand: 22525.71 kg O₂/year
+kWh Price: $0.05
+
+Aerator-Specific Parameters:
+AquaPaddle Standard V1:
+  Horse Power: 3.00 HP
+  t₁₀: 1.0000000000000002 min
+  t₇₀: 7.999999999999999 min
+  DO Deficit Factor: 1.00
+  Water Depth Factor: 1.00
+  Placement Factor: 1.00
+  Calculated DO Rate: 7.71 kg O₂/h
+  SAE: 3.45 kg O₂/kWh
+  KlaT: 9.43 h⁻¹
+  Power: 2.24 kW
+
+PaddlePro Eco V2:
+  Horse Power: 3.00 HP
+  t₁₀: 1.4000000000000001 min
+  t₇₀: 8.4 min
+  DO Deficit Factor: 1.00
+  Water Depth Factor: 1.00
+  Placement Factor: 1.00
+  Calculated DO Rate: 7.71 kg O₂/h
+  SAE: 3.45 kg O₂/kWh
+  KlaT: 9.43 h⁻¹
+  Power: 2.24 kW
+
+HydroWheel MaxFlow V1:
+  Horse Power: 3.00 HP
+  t₁₀: 3.6000000000000005 min
+  t₇₀: 15.199999999999998 min
+  DO Deficit Factor: 1.00
+  Water Depth Factor: 1.00
+  Placement Factor: 1.00
+  Calculated DO Rate: 7.71 kg O₂/h
+  SAE: 3.45 kg O₂/kWh
+  KlaT: 5.69 h⁻¹
+  Power: 2.24 kW
+
+Metrics Comparison (Average HP vs Ideal HP):
+Pond Volume (m³): 100 vs 100 (Log % Variation: N/A)
+Cs (mg/L): 6.6 vs 6.6 (Log % Variation: 0.0)
+KlaT (h⁻¹): 9.43 vs 9.43 (Log % Variation: 0.0)
+Kla20 (h⁻¹): 7.8 vs 7.8 (Log % Variation: 0.0)
+SOTR (kg O₂/h): 7.71 vs 7.2 (Log % Variation: 0.18)
+SAE (kg O₂/kWh): 3.45 vs 2.41 (Log % Variation: 0.31)
+US$/kg O₂: 0.01 vs 0.02 (Log % Variation: -0.0)
+Power (kW): 2.24 vs 2.98 (Log % Variation: -0.24)
+
+Optimization Results:
+Optimal Total Cost: $2320.29
+Depreciation Cost: $640.36
+Aerator Usage:
+  AquaPaddle Standard V1: 1.00 units
+
+Breakeven Analysis (Subpowered vs Overpowered):
+AquaPaddle Standard V1:
+  Subpowered Cost (HP=1.50): $2165.60
+  Overpowered Cost (HP=6.00): $2165.60
+PaddlePro Eco V2:
+  Subpowered Cost (HP=1.50): $2175.88
+  Overpowered Cost (HP=6.00): $2175.88
+HydroWheel MaxFlow V1:
+  Subpowered Cost (HP=1.50): $2238.07
+  Overpowered Cost (HP=6.00): $2238.07
